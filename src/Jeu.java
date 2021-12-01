@@ -1,40 +1,41 @@
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class Jeu {
 
-    private VueControleurGrille creation;
     private VueControleurGrille jeu;
-    private int size;
-    private CaseType[][] tabType;
+    private final int size;
+    private final int level;
+    private final User user;
     private final Scanner scanner = new Scanner(System.in);
 
-    public Jeu() {
-        this.setSize();
-        this.initialize();
-        this.start();
-    }
+    public Jeu(int size, int level, User user) {
+        this.size = size;
+        this.level = level;
+        this.user = user;
 
-    public void setSize(){
-        System.out.println("Entrer la taille de la fenêtre: ");
-        int taille = scanner.nextInt();
-        while (taille < 0){
-            System.out.println("La valeur entrée est mauvaise, veuillez réessayer: ");
-            taille = scanner.nextInt();
+        if (this.level == 0) {
+            try {
+                this.createGame();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            this.startGame();
         }
-        this.size = taille;
     }
 
-    public void initialize() {
-        this.creation = new VueControleurGrille(this.size, true);
-        this.creation.setVisible(true);
+    public void createGame() throws IOException {
+        this.jeu = new VueControleurGrille(this.size, 0, this.user);
+        this.jeu.setVisible(true);
     }
 
-    public void start() {
-
+    public void startGame() {
+        this.jeu = new VueControleurGrille(this.size, this.level, this.user);
+        this.jeu.setVisible(true);
     }
-
-    public static void main(String[] args) {
-        Jeu jeu = new Jeu();
-    }
-
 }
