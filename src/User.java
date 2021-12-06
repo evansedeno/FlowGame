@@ -27,9 +27,7 @@ public class User implements Comparable<User> {
     }
 
     public void addPoints(int points) {
-        Files files = new Files();
         this.points = this.points + points;
-        //files.addUserPointToFile(this.points);
     }
 
     public void setPoints(int points) {
@@ -38,12 +36,6 @@ public class User implements Comparable<User> {
 
     public int getPoints() {
         return this.points;
-    }
-
-    public void copyUser(User user) {
-        this.setUsername(user.getUsername());
-        this.setId(user.getId());
-        this.setPoints(user.getPoints());
     }
 
     @Override

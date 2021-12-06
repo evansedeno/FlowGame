@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.awt.event.*;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class VueControleurGrille extends JFrame {
     private int level;
     private final int size;
     private final User user;
-    private final List<Chemin> ways = new ArrayList<Chemin>();
+    private final List<Chemin> ways = new ArrayList<>();
     private boolean clicked = false;
     private final boolean iscreation;
 
@@ -40,8 +39,8 @@ public class VueControleurGrille extends JFrame {
         if (level == 0) {
             this.iscreation = true;
             Files file = new Files();
-            this.setNewLevel(file.getNextLevel(size));
-            this.displayValidateButton(file);
+            setNewLevel(file.getNextLevel(size));
+            displayValidateButton();
             grille.generateEmptyGrille();
         } else {
             this.iscreation = false;
@@ -59,6 +58,7 @@ public class VueControleurGrille extends JFrame {
     }
 
     public void addPaneOnVue() {
+        //On ajoute les élements à la vue en fonction de si l'on créer ou on joue un niveau
         if (this.iscreation) {
             this.allPane.add(this.contentPane);
             this.allPane.add(this.buttonPane);
@@ -67,11 +67,8 @@ public class VueControleurGrille extends JFrame {
         }
     }
 
-    public ModelGrille getGrille() {
-        return this.grille;
-    }
-
     public void addGrilleOnVue() {
+        //On ajoute chaque case à la vue de la grille
         for (int i = 0; i < grille.getSize(); i++) {
             for (int j = 0; j < grille.getSize(); j++) {
                 this.contentPane.add(grille.getVueCase(i, j));
@@ -80,132 +77,64 @@ public class VueControleurGrille extends JFrame {
     }
 
     public void addGrilleListeners() {
-
+        //Pour chaque case de la grille on ajoute les listeners
         for (int i = 0; i < grille.getSize(); i++) {
             for (int j = 0; j < grille.getSize(); j++) {
-                HashMap<VueCase, Point> hashMap = this.grille.getHashMap();
-
                 this.grille.getVueCase(i, j).addMouseListener(new MouseAdapter() {
                     @Override
                     public void mousePressed(MouseEvent e) {
-                        if (iscreation) {
-                            ((VueCase) e.getSource()).getCase().setNextNumber();
-                        } else if (((VueCase) e.getSource()).getCase().isLocked()) {
-                            Chemin way = new Chemin(((VueCase) e.getSource()));
-                            way.getStart().setStarter(way.getStart());
-                            ways.add(way);
-                            clicked = true;
-                        }
-
-                        ((VueCase) e.getSource()).update();
+                        mousePressedListener((VueCase) e.getSource());
                     }
 
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                        if (((VueCase) e.getSource()).getCase().isWay()) {
-                            for (Chemin way : ways) {
-                                for (VueCase cases : way.getWay()) {
-                                    if (cases.getCase() == ((VueCase) e.getSource()).getCase()) {
-                                        deleteChemin(way);
-                                    }
-                                }
-                            }
-                        }
+                        mouseClickedListener((VueCase) e.getSource());
                     }
 
                     @Override
                     public void mouseEntered(MouseEvent e) {
                         currentComponent = (JComponent) e.getSource();
-
-                        if (((VueCase) currentComponent).getCase().isWay() && clicked) {
-                            deleteChemin(ways.get(ways.size() - 1));
-                            clicked = false;
-                        }
-
-                        if (ways.size() > 0
-                                && ways.get(ways.size() - 1).getStart() != null
-                                && ways.get(ways.size() - 1).getStop() == null
-                                && ((VueCase) currentComponent).getCase().getType() == CaseType.empty
-                                && clicked) {
-                            ways.get(ways.size() - 1).addCase((VueCase) currentComponent);
-                            checkGoodChemin(ways.get(ways.size() - 1));
-                            ((VueCase) currentComponent).setStarter(ways.get(ways.size() - 1).getStart());
-                            drawCases(ways.get(ways.size() - 1));
-                        }
+                        mouseEnteredListener((VueCase) currentComponent);
                     }
 
                     @Override
                     public void mouseReleased(MouseEvent e) {
-                        if (((VueCase) currentComponent).getCase().isLocked()
-                                && ((VueCase) currentComponent).getCase().getType() == ways.get(ways.size() - 1).getStart().getCase().getType()
-                                && clicked) {
-                            if (ways.get(ways.size() - 1).setStop((VueCase) currentComponent)) {
-                                clicked = false;
-                                drawCases(ways.get(ways.size() - 1));
-                                repaint();
-
-                                if (grille.validateGrille()) {
-                                    endGame();
-                                }
-                            }
-                        } else if (ways.size() > 0 && ways.get(ways.size() - 1).getStop() == null) {
-                            deleteChemin(ways.get(ways.size() - 1));
-                            clicked = false;
-                        }
-                        if (ways.size() > 0) checkGoodChemin(ways.get(ways.size() - 1));
-
+                        mouseReleaseListener((VueCase) currentComponent);
                     }
                 });
             }
         }
     }
 
-    public void checkGoodChemin(Chemin chemin) {
-
-        int maxi = 2;
-        if (chemin.getStop() != null) maxi = 1;
-
-        if (chemin.getStart() != null) {
-            for (int i = 1; i < chemin.getWay().size() - maxi; ++i) {
-
-                boolean cond1 = chemin.getWay().get(i).getCase().getX() == (chemin.getWay().get(i + 1).getCase().getX() + 1);
-                boolean cond2 = chemin.getWay().get(i).getCase().getX() == (chemin.getWay().get(i + 1).getCase().getX() - 1);
-                boolean cond3 = chemin.getWay().get(i).getCase().getY() == (chemin.getWay().get(i + 1).getCase().getY() + 1);
-                boolean cond4 = chemin.getWay().get(i).getCase().getY() == (chemin.getWay().get(i + 1).getCase().getY() - 1);
-
-                if ((!chemin.getWay().get(i).getCase().isWay()) || (!cond1 && !cond2 && !cond3 & !cond4)) {
-                    deleteChemin(chemin);
-                    break;
-                }
-            }
-        }
-    }
-
-    public void drawCases(Chemin chemin) {
-        ways.get(ways.size() - 1).assignType();
+    public void drawCases() {
+        //On réassigne chaque case
+        ways.get(ways.size() - 1).assignType(this.ways);
         repaint();
     }
 
     public void deleteChemin(Chemin chemin) {
-        for (int i = 1; i < chemin.getWay().size(); ++i) {
-            if (chemin.getStop() != chemin.getWay().get(i)) {
-                chemin.getStart().setStarter(null);
-                chemin.getWay().get(i).getCase().setType(CaseType.empty);
-                repaint();
-            }
-        }
+        //On supprime chaque case du chemin
+        chemin.deleteChemin(this.ways);
+        //On supprime le chemin de la liste des chemins
+        this.ways.remove(chemin);
+        //On re-actualise la grille
+        repaint();
     }
 
     public void endGame() {
-        JPanel gameEnd = new JPanel(new GridLayout(3,1));
+
+        //On créer un nouveau panel en felicitant le joueur
+        JPanel gameEnd = new JPanel(new GridLayout(3, 1));
         gameEnd.setBackground(Color.darkGray);
-        gameEnd.setPreferredSize(new Dimension(getWidth()-100, getHeight()/2));
+        gameEnd.setPreferredSize(new Dimension(getWidth() - 100, getHeight() / 2));
+
         JLabel text1 = new JLabel("Bravo " + this.user.getUsername() + " !");
         JLabel text2 = new JLabel("Vous avez réussi le niveau !");
         text1.setForeground(Color.white);
         text1.setHorizontalAlignment(JLabel.CENTER);
         text2.setForeground(Color.white);
         text2.setHorizontalAlignment(JLabel.CENTER);
+
         this.user.addPoints(this.size);
         Files file = new Files();
         ArrayList<User> users = file.getAllUsers();
@@ -231,21 +160,19 @@ public class VueControleurGrille extends JFrame {
         gameEnd.add(text1);
         gameEnd.add(text2);
 
+        //On propose au joueur de retourner au menu
         JButton back = new JButton("RETOUR");
         back.setPreferredSize(new Dimension(30, 30));
         back.setBackground(Color.white);
         back.setBorderPainted(false);
         back.setFont(new Font("buttonfont", Font.BOLD, 20));
 
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                VueControleurMenu menu = new VueControleurMenu();
-                menu.setUsername(user);
-                menu.drawMainMenu();
-                setVisible(false);
-                dispose();
-            }
+        back.addActionListener(e -> {
+            VueControleurMenu menu = new VueControleurMenu();
+            menu.setUsername(user);
+            menu.drawMainMenu();
+            setVisible(false);
+            dispose();
         });
 
         gameEnd.add(back);
@@ -261,7 +188,7 @@ public class VueControleurGrille extends JFrame {
 
     public void displayCreationFinished() {
 
-
+        //On affiche un nouveau panel en disant que le niveau a bien été enregistré
         JPanel gameReady = new JPanel();
         gameReady.setBackground(Color.darkGray);
         JLabel text = new JLabel("Le niveau a bien été enregisté !");
@@ -273,7 +200,7 @@ public class VueControleurGrille extends JFrame {
         text.setFont(font);
         gameReady.add(text);
 
-
+        //On propose au joueur de retourner au menu
         JButton button = new JButton("RETOUR");
         button.setBackground(Color.white);
         button.setPreferredSize(new Dimension(getWidth() / 2, 50));
@@ -291,18 +218,125 @@ public class VueControleurGrille extends JFrame {
         revalidate();
     }
 
-    public void displayValidateButton(Files file) {
+    public void displayValidateButton() {
+        Files file = new Files();
         JButton button = new JButton("VALIDER");
         button.setBackground(Color.white);
         button.setPreferredSize(new Dimension(getWidth() / 2, 50));
 
         button.addActionListener(e -> {
+            //On créer un nouveau fichier si on valide la grille
             file.writeLevelFile(this.size, this.level, this.grille);
             displayCreationFinished();
         });
 
+        //On ajoute le bouton valider
         this.buttonPane.add(button);
         this.buttonPane.setMinimumSize(new Dimension(PIXEL_PER_SQUARE * this.size, 50));
         this.buttonPane.setMaximumSize(new Dimension(PIXEL_PER_SQUARE * this.size, 50));
     }
+
+    public void mouseReleaseListener(VueCase mycase) {
+        if (this.ways.size() > 0 && mycase.getCase().isLocked() && this.clicked) {
+            //On vérifie si la souris est bien lâché sur une case bloquée
+            if (mycase.getCase().getType() == this.ways.get(this.ways.size() - 1).getStart().getCase().getType() && this.clicked && mycase != this.ways.get(this.ways.size() - 1).getStart()) {
+                //On vérifie si la case STOP est valide
+                this.ways.get(this.ways.size() - 1).setStop(mycase);
+                //On vérifie si toutes les cases ont été remplis
+                if (this.grille.validateGrille()) {
+                    endGame();
+                }
+            } else {
+                deleteChemin(this.ways.get(this.ways.size() - 1));
+            }
+        } else if (this.ways.size() > 0 && !mycase.getCase().isLocked() && this.clicked) {
+            deleteChemin(this.ways.get(this.ways.size() - 1));
+        }
+        this.clicked = false;
+        //On vérifie que le dernier chemin est valide
+        if (this.ways.size() > 0) {
+            this.ways.get(this.ways.size() - 1).checkGoodChemin(this.ways);
+            drawCases();
+        }
+    }
+
+    public void mouseClickedListener(VueCase mycase) {
+        //On vérifie si on clique sur un chemin
+        if (mycase.getCase().isWay()) {
+            ArrayList<Chemin> listchemin = new ArrayList<>();
+            // On ajoute le chemin qui contient la case cliqué à la liste des chemins
+            for (int i = 0; i < this.ways.size(); ++i) {
+                if (this.ways.get(i).getWay().contains(mycase)) {
+                    listchemin.add(this.ways.get(i));
+                }
+            }
+            // On supprime chaque chemin qui contient la case cliqué
+            for (Chemin way : listchemin) {
+                deleteChemin(way);
+            }
+        }
+    }
+
+    public void mousePressedListener(VueCase mycase) {
+        //On vérifie si on créer la grille ou si on joue
+        if (this.iscreation) {
+            //On choisi la prochaine case à placer
+            mycase.getCase().setNextNumber();
+            mycase.update();
+        } else {
+            if (mycase.getCase().isLocked()) {
+
+                //On récupère la liste de chaque debut et chaque fin de chaque chemin complet
+                List<VueCase> lockedcases = new ArrayList<>();
+                for (Chemin chemin : this.ways) {
+                    if (chemin.getStart() != null && chemin.getStart() != null) {
+                        lockedcases.add(chemin.getStart());
+                        lockedcases.add(chemin.getStop());
+                    }
+                }
+
+                //On vérifie si la case pressée n'appartient pas déjà à un chemin existant
+                if (!lockedcases.contains(mycase)) {
+                    Chemin way = new Chemin(mycase);
+                    way.getStart().setStarter(way.getStart());
+                    this.ways.add(way);
+                    this.clicked = true;
+                }
+            }
+        }
+    }
+
+    public void mouseEnteredListener(VueCase mycase) {
+
+        if (this.clicked && this.ways.size() > 0) {
+            //On vérifie si on traverse une case bloquée autre que celle appartenant au chemin
+            if (!mycase.getCase().isLocked()) {
+                if (mycase.getCase().isTurn() || this.ways.get(this.ways.size() - 1).getWayWithoutStartAndStop().contains(mycase)) {
+                    mouseReleaseListener(mycase);
+                } else if (mycase.getCase().getType() == CaseType.empty || mycase.getCase().isWay()) {
+                    Chemin lastway = this.ways.get(this.ways.size() - 1);
+                    if ((mycase.getCase().isWay()
+                            && !mycase.getCase().isSameDirection(lastway.getWay().get(lastway.getWay().size() - 1).getCase().getType()))
+                            || mycase.getCase().getType() == CaseType.empty) {
+                        //On ajoute la case au chemin
+                        this.ways.get(this.ways.size() - 1).addCase(mycase);
+                        //On ajoute à la case actuelle, la case du début du chemin
+                        mycase.setStarter(this.ways.get(this.ways.size() - 1).getStart());
+                        //On vérifie si le chemin est toujours valide
+                        this.ways.get(this.ways.size() - 1).checkGoodChemin(this.ways);
+                        //On redessine les cases
+                        drawCases();
+                    } else {
+                        mouseReleaseListener(mycase);
+                    }
+                } else {
+                    mouseReleaseListener(mycase);
+                }
+            } else {
+                mouseReleaseListener(mycase);
+            }
+        }
+    }
+
+
 }

@@ -1,10 +1,4 @@
-import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Objects;
-import java.util.Random;
-import java.util.stream.Stream;
 
 public class ModelCase {
 
@@ -31,47 +25,6 @@ public class ModelCase {
 
     public void checkLockCase() {
         if (this.type != CaseType.empty) this.locked = true;
-    }
-
-    public CaseType getTypeInFile() {
-
-        int size = 0;
-        try (Stream<String> lines = Files.lines(Path.of("cases.txt"), Charset.defaultCharset())) {
-            size = (int) lines.count();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        CaseType myCase;
-        String[][] listCases = new String[size][size];
-
-        File file = new File("cases.txt");
-        FileReader fileR = null;
-        try {
-            fileR = new FileReader(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        assert fileR != null;
-        BufferedReader buffer = new BufferedReader(fileR);
-        String s = "";
-        String[] w = null;
-        int i = 0;
-        while (true) {
-            try {
-                if ((s = buffer.readLine()) == null) break;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            int j = 0;
-            w = s.split(" ");
-            for (String wrd : w) {
-                listCases[i][j] = wrd;
-                ++j;
-            }
-            ++i;
-        }
-        return CaseType.valueOf(listCases[this.y][this.x]);
     }
 
     public void setType(CaseType ct) {
@@ -101,32 +54,6 @@ public class ModelCase {
         }
     }
 
-    public void setNextWay() {
-        switch (this.type) {
-            case empty:
-                this.type = CaseType.h0v0;
-                break;
-            case h0v0:
-                this.type = CaseType.h0h1;
-                break;
-            case h0h1:
-                this.type = CaseType.v0v1;
-                break;
-            case v0v1:
-                this.type = CaseType.h0v1;
-                break;
-            case h0v1:
-                this.type = CaseType.h1v0;
-                break;
-            case h1v0:
-                this.type = CaseType.h1v1;
-                break;
-            case h1v1:
-                this.type = CaseType.empty;
-                break;
-        }
-    }
-
     public CaseType getType() {
         return this.type;
     }
@@ -135,7 +62,16 @@ public class ModelCase {
         return this.type == CaseType.h0v0
                 || this.type == CaseType.h0v1
                 || this.type == CaseType.h1v0
-                || this.type == CaseType.h1v1;
+                || this.type == CaseType.h1v1
+                || this.type == CaseType.cross;
+    }
+
+    public boolean isNotTurn() {
+        return this.type != CaseType.h0v0
+                && this.type != CaseType.h0v1
+                && this.type != CaseType.h1v0
+                && this.type != CaseType.h1v1
+                && this.type != CaseType.cross;
     }
 
     public boolean isWay() {
@@ -144,7 +80,18 @@ public class ModelCase {
                 || this.type == CaseType.h1v0
                 || this.type == CaseType.h1v1
                 || this.type == CaseType.h0v1
-                || this.type == CaseType.v0v1;
+                || this.type == CaseType.v0v1
+                || this.type == CaseType.cross;
+    }
+
+    public boolean isSameDirection(CaseType type) {
+        if (type == CaseType.cross && this.type == CaseType.v0v1) {
+            return true;
+        } else if (type == CaseType.cross && this.type == CaseType.h0h1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 

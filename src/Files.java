@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Files {
 
-
     public int getNextLevel(int size) {
         File folder = new File("levels/" + size);
         File[] listOfFiles = folder.listFiles();
@@ -33,8 +32,8 @@ public class Files {
         }
 
         //On écrit un fichier text avec toutes les cases
-        File cases = new File("levels/" + size + "/" + level + ".txt");
         try {
+            File cases = new File("levels/" + size + "/" + level + ".txt");
             cases.createNewFile();
             FileWriter writeCases = new FileWriter("levels/" + size + "/" + level + ".txt");
             writeCases.write(casesType.toString());
@@ -72,7 +71,7 @@ public class Files {
     }
 
     public ArrayList<User> getAllUsers() {
-        ArrayList<User> users = new ArrayList<User>();
+        ArrayList<User> users = new ArrayList<>();
         try {
             List<String> content = java.nio.file.Files.readAllLines(Path.of("users.json"), StandardCharsets.UTF_8);
 
@@ -92,39 +91,6 @@ public class Files {
             e.printStackTrace();
         }
         return users;
-    }
-
-    public User getUserById(int id) {
-        User user = new User(id, "", 0);
-        try {
-            List<String> content = java.nio.file.Files.readAllLines(Path.of("users.json"), StandardCharsets.UTF_8);
-
-            for (int i = 0; i < content.size(); ++i) {
-                content.set(i, content.get(i).replaceAll("\\s+", ""));
-            }
-
-            for (int i = 0; i < content.size(); ++i) {
-                if (content.get(i).equals("{")) {
-                    int idline = Integer.parseInt(content.get(i + 1).replaceAll("\"id\":", "").replaceAll(",", ""));
-                    String usernameline = content.get(i + 2).replaceAll("\"username\":", "").replaceAll(",", "").replaceAll("\"", "");
-                    int pointsline = Integer.parseInt(content.get(i + 3).replaceAll("\"points\":", "").replaceAll(",", ""));
-
-                    if (idline == id) {
-                        user.setId(idline);
-                        user.setUsername(usernameline);
-                        user.setPoints(pointsline);
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (user.getUsername().equals("")) {
-            user.setId(this.getMaxId() + 1);
-            user.setUsername("Invite" + user.getId());
-            user.setPoints(0);
-        }
-        return user;
     }
 
     public User getUserByUsername(String username) {
@@ -170,7 +136,7 @@ public class Files {
     }
 
     public void actualizeUsers(ArrayList<User> users) {
-        ArrayList<String> json = new ArrayList<String>();
+        ArrayList<String> json = new ArrayList<>();
         json.add("[");
         for (int i = 0; i < users.size(); ++i) {
             json.add("  {");

@@ -1,9 +1,4 @@
 import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Scanner;
-import java.util.stream.Stream;
 
 public class Jeu {
 
@@ -11,7 +6,6 @@ public class Jeu {
     private final int size;
     private final int level;
     private final User user;
-    private final Scanner scanner = new Scanner(System.in);
 
     public Jeu(int size, int level, User user) {
         this.size = size;

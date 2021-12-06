@@ -1,14 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
-import java.io.IOException;
-import java.util.Objects;
-import java.util.Random;
 
 public class VueCase extends JPanel {
 
     private final ModelCase c;
     private VueCase starter = null;
+    private VueCase otherstarter = null;
+    private CaseType firsttype = null;
+    private CaseType lasttype = null;
 
     public VueCase(int x, int y, CaseType type) {
         this.c = new ModelCase(x, y, type);
@@ -78,7 +77,6 @@ public class VueCase extends JPanel {
             g.fillRect(0, 0, getWidth(), getHeight());
             g.setColor(Color.white);
             g.drawRoundRect(getWidth() / 4, getHeight() / 4, getWidth() / 2, getHeight() / 2, 5, 5);
-            Rectangle2D deltaText = g.getFont().getStringBounds("0", g.getFontMetrics().getFontRenderContext());
             switch (this.c.getType()) {
                 case S1:
                     //g.drawString("1", getWidth() / 2 - (int) deltaText.getCenterX(), getHeight() / 2 - (int) deltaText.getCenterY());
@@ -130,10 +128,25 @@ public class VueCase extends JPanel {
                     drawSix(g);
                     break;
                 case cross:
-                    drawNoon(g);
-                    drawSix(g);
-                    drawThree(g);
-                    drawNine(g);
+
+                    if (this.otherstarter != null) {
+                        VueCase firststarter = this.starter;
+                        VueCase laststarter = this.otherstarter;
+                        if (this.firsttype == CaseType.h0h1) {
+                            drawThree(g);
+                            drawNine(g);
+                            this.setStarter(laststarter);
+                            drawNoon(g);
+                            drawSix(g);
+                        } else if (this.firsttype == CaseType.v0v1) {
+                            drawNoon(g);
+                            drawSix(g);
+                            this.setStarter(laststarter);
+                            drawThree(g);
+                            drawNine(g);
+                        }
+                        this.setStarter(firststarter);
+                    }
                     break;
             }
         }
@@ -145,5 +158,26 @@ public class VueCase extends JPanel {
 
     public VueCase getStarter() {
         return this.starter;
+    }
+
+    public void sendCrossToDraw(Chemin chemin) {
+
+        this.otherstarter = chemin.getStart();
+        this.firsttype = this.c.getType();
+        if (this.firsttype == CaseType.h0h1) {
+            this.lasttype = CaseType.v0v1;
+        } else if (this.firsttype == CaseType.v0v1) {
+            this.lasttype = CaseType.h0h1;
+        }
+        this.c.setType(CaseType.cross);
+        update();
+    }
+
+    public CaseType getFirstType(){
+        return this.firsttype;
+    }
+
+    public CaseType getLastType(){
+        return this.lasttype;
     }
 }

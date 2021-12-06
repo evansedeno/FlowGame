@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -8,25 +7,21 @@ public class VueControleurMenu extends JFrame {
 
     private static final int PIXEL_PER_SQUARE = 60;
     private static final int SIZE_WINDOWS = 5;
-    private JComponent currentComponent;
     private final JPanel menuPane = new JPanel();
-    private final JPanel levelPane = new JPanel();
-    private final JPanel pointsPane = new JPanel();
     private final Font buttonfont = new Font("buttonfont", Font.BOLD, 20);
-    private String level = "";
+    private String level;
     private final ArrayList<User> users = new ArrayList<>();
     private User user;
 
 
     public VueControleurMenu() {
-        //On créer la vue
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(SIZE_WINDOWS * PIXEL_PER_SQUARE * 2, SIZE_WINDOWS * PIXEL_PER_SQUARE * 2);
         setResizable(false);
 
-        //On récupère tout les utilisateurs
-        this.addUsers();
-        this.drawUsernameMenu();
+        this.addUsers();            //On récupère tout les utilisateurs
+        this.drawUsernameMenu();    //On affiche le menu pour demander le nom d'utilisateur
         repaint();
 
         setContentPane(this.menuPane);
@@ -93,28 +88,19 @@ public class VueControleurMenu extends JFrame {
         creategame.setFont(this.buttonfont);
         seepoints.setFont(this.buttonfont);
 
-        creategame.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                drawSizesMenu(true);
-                repaint();
-            }
+        creategame.addActionListener(e -> {
+            drawSizesMenu(true);
+            repaint();
         });
 
-        playgame.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                drawSizesMenu(false);
-                repaint();
-            }
+        playgame.addActionListener(e -> {
+            drawSizesMenu(false);
+            repaint();
         });
 
-        seepoints.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                drawPointsMenu();
-                repaint();
-            }
+        seepoints.addActionListener(e -> {
+            drawPointsMenu();
+            repaint();
         });
 
         game.add(creategame);
@@ -151,16 +137,13 @@ public class VueControleurMenu extends JFrame {
             button.setBorderPainted(false);
             button.setFont(this.buttonfont);
 
-            button.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    if (iscreation) {
-                        drawCreateMenu(i);
-                        repaint();
-                    } else {
-                        drawLevelsMenu(i);
-                        repaint();
-                    }
+            button.addActionListener(e -> {
+                if (iscreation) {
+                    drawCreateMenu(i);
+                    repaint();
+                } else {
+                    drawLevelsMenu(i);
+                    repaint();
                 }
             });
 
@@ -168,18 +151,9 @@ public class VueControleurMenu extends JFrame {
         }
 
 
-        JButton back = new JButton("RETOUR");
-        back.setPreferredSize(new Dimension(getWidth() / 4, 30));
-        back.setBackground(Color.white);
-        back.setBorderPainted(false);
-        back.setFont(this.buttonfont);
+        JButton back = this.drawReturnButton();
 
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                drawMainMenu();
-            }
-        });
+        back.addActionListener(e -> drawMainMenu());
 
         this.menuPane.add(sizePane);
         this.menuPane.add(Box.createRigidArea(new Dimension(getWidth(), 50)));
@@ -209,32 +183,20 @@ public class VueControleurMenu extends JFrame {
             button.setBorderPainted(false);
             button.setFont(this.buttonfont);
 
-            button.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    level = "levels/" + size + "/" + i;
-                    menuPane.removeAll();
-                    new Jeu(size, i, user);
-                    setVisible(false);
-                    dispose();
-                }
+            button.addActionListener(e -> {
+                level = "levels/" + size + "/" + i;
+                menuPane.removeAll();
+                new Jeu(size, i, user);
+                setVisible(false);
+                dispose();
             });
 
             levelPane.add(button);
         }
 
-        JButton back = new JButton("RETOUR");
-        back.setPreferredSize(new Dimension(getWidth() / 4, 30));
-        back.setBackground(Color.white);
-        back.setBorderPainted(false);
-        back.setFont(this.buttonfont);
+        JButton back = this.drawReturnButton();
 
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                drawSizesMenu(false);
-            }
-        });
+        back.addActionListener(e -> drawSizesMenu(false));
 
         this.menuPane.add(levelPane);
         this.menuPane.add(Box.createRigidArea(new Dimension(getWidth(), 50)));
@@ -295,18 +257,9 @@ public class VueControleurMenu extends JFrame {
             pointsPane.add(user);
         }
 
-        JButton back = new JButton("RETOUR");
-        back.setPreferredSize(new Dimension(getWidth() / 4, 30));
-        back.setBackground(Color.white);
-        back.setBorderPainted(false);
-        back.setFont(this.buttonfont);
+        JButton back = this.drawReturnButton();
 
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                drawMainMenu();
-            }
-        });
+        back.addActionListener(e -> drawMainMenu());
 
         this.menuPane.add(pointsPane);
         this.menuPane.add(Box.createRigidArea(new Dimension(getWidth(), 50)));
@@ -343,15 +296,12 @@ public class VueControleurMenu extends JFrame {
         validate.setBorderPainted(false);
         validate.setFont(this.buttonfont);
 
-        validate.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String userstr = usernamefield.getText();
-                user = files.getUserByUsername(userstr);
-                if (user.getUsername().equals("")) user.setUsername(userstr);
-                menuPane.removeAll();
-                drawMainMenu();
-            }
+        validate.addActionListener(e -> {
+            String userstr = usernamefield.getText();
+            user = files.getUserByUsername(userstr);
+            if (user.getUsername().equals("")) user.setUsername(userstr);
+            menuPane.removeAll();
+            drawMainMenu();
         });
 
         username.add(validate);
@@ -359,12 +309,12 @@ public class VueControleurMenu extends JFrame {
         repaint();
     }
 
-
-    public boolean isLevel() {
-        return !this.level.equals("");
-    }
-
-    public String getLevel() {
-        return this.level;
+    public JButton drawReturnButton() {
+        JButton back = new JButton("RETOUR");
+        back.setPreferredSize(new Dimension(getWidth() / 4, 30));
+        back.setBackground(Color.white);
+        back.setBorderPainted(false);
+        back.setFont(this.buttonfont);
+        return back;
     }
 }
