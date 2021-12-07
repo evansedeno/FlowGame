@@ -94,6 +94,7 @@ public class VueControleurGrille extends JFrame {
                     @Override
                     public void mouseEntered(MouseEvent e) {
                         currentComponent = (JComponent) e.getSource();
+                        System.out.println(((VueCase) currentComponent).getCase().getType());
                         mouseEnteredListener((VueCase) currentComponent);
                     }
 
@@ -138,13 +139,14 @@ public class VueControleurGrille extends JFrame {
         this.user.addPoints(this.size);
         Files file = new Files();
         ArrayList<User> users = file.getAllUsers();
-        int userssizebefore = users.size();
+        boolean userexist = false;
         for (int i = 0; i < users.size(); ++i) {
             if (users.get(i).getId() == this.user.getId()) {
                 users.set(i, this.user);
+                userexist = true;
             }
         }
-        if (userssizebefore == users.size()) {
+        if (!userexist) {
             users.add(this.user);
         }
         file.actualizeUsers(users);
@@ -255,8 +257,11 @@ public class VueControleurGrille extends JFrame {
         this.clicked = false;
         //On vérifie que le dernier chemin est valide
         if (this.ways.size() > 0) {
-            this.ways.get(this.ways.size() - 1).checkGoodChemin(this.ways);
-            drawCases();
+            if (!this.ways.get(this.ways.size() - 1).checkGoodChemin()) {
+                this.ways.get(this.ways.size() - 1).deleteChemin(this.ways);
+                this.ways.remove(this.ways.get(this.ways.size() - 1));
+            }
+            if (this.ways.size() > 0) drawCases();
         }
     }
 
@@ -317,13 +322,12 @@ public class VueControleurGrille extends JFrame {
                     Chemin lastway = this.ways.get(this.ways.size() - 1);
                     if ((mycase.getCase().isWay()
                             && !mycase.getCase().isSameDirection(lastway.getWay().get(lastway.getWay().size() - 1).getCase().getType()))
-                            || mycase.getCase().getType() == CaseType.empty) {
+                            || mycase.getCase().getType() == CaseType.empty
+                        && this.ways.get(this.ways.size() - 1).checkGoodChemin()) {
                         //On ajoute la case au chemin
                         this.ways.get(this.ways.size() - 1).addCase(mycase);
                         //On ajoute à la case actuelle, la case du début du chemin
                         mycase.setStarter(this.ways.get(this.ways.size() - 1).getStart());
-                        //On vérifie si le chemin est toujours valide
-                        this.ways.get(this.ways.size() - 1).checkGoodChemin(this.ways);
                         //On redessine les cases
                         drawCases();
                     } else {

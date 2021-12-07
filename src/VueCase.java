@@ -133,19 +133,20 @@ public class VueCase extends JPanel {
                         VueCase firststarter = this.starter;
                         VueCase laststarter = this.otherstarter;
                         if (this.firsttype == CaseType.h0h1) {
-                            drawThree(g);
-                            drawNine(g);
                             this.setStarter(laststarter);
                             drawNoon(g);
                             drawSix(g);
+                            this.setStarter(firststarter);
+                            drawThree(g);
+                            drawNine(g);
                         } else if (this.firsttype == CaseType.v0v1) {
-                            drawNoon(g);
-                            drawSix(g);
                             this.setStarter(laststarter);
                             drawThree(g);
                             drawNine(g);
+                            this.setStarter(firststarter);
+                            drawNoon(g);
+                            drawSix(g);
                         }
-                        this.setStarter(firststarter);
                     }
                     break;
             }
@@ -154,10 +155,6 @@ public class VueCase extends JPanel {
 
     public void setStarter(VueCase starter) {
         this.starter = starter;
-    }
-
-    public VueCase getStarter() {
-        return this.starter;
     }
 
     public void sendCrossToDraw(Chemin chemin) {
@@ -173,11 +170,19 @@ public class VueCase extends JPanel {
         update();
     }
 
-    public CaseType getFirstType(){
+    public CaseType getFirstType() {
         return this.firsttype;
     }
 
-    public CaseType getLastType(){
+    public CaseType getLastType() {
         return this.lasttype;
+    }
+
+    public VueCase getStarter(){
+        return this.starter;
+    }
+
+    public VueCase getOtherStarter(){
+        return this.otherstarter;
     }
 }

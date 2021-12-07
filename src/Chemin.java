@@ -213,6 +213,12 @@ public class Chemin {
                 && firstcase.getCase().getY() < lastcase.getCase().getY()
                 && drawcase.getCase().isNotTurn()) {
             drawcase.getCase().setType(CaseType.h0v1);
+        } else if (firstcase.getCase().getType() == CaseType.h1v0
+                && lastcase.getCase().isLocked()
+                && firstcase.getCase().getX() > lastcase.getCase().getX()
+                && firstcase.getCase().getY() > lastcase.getCase().getY()
+                && drawcase.getCase().isNotTurn()) {
+            drawcase.getCase().setType(CaseType.h0v1);
         } else if (firstcase.getCase().getType() == CaseType.h0v0
                 && lastcase.getCase().isLocked()
                 && firstcase.getCase().getX() > lastcase.getCase().getX()
@@ -572,7 +578,11 @@ public class Chemin {
                             if (chemins.get(j).getWay().get(k).getCase().getType() == CaseType.cross
                                     && chemins.get(j).getWay().get(k) == this.getWay().get(i)) {
                                 chemins.get(j).getWay().get(k).setStarter(chemins.get(j).getStart());
-                                chemins.get(j).getWay().get(k).getCase().setType(chemins.get(j).getWay().get(k).getLastType());
+                                if (chemins.get(j).getStart() == chemins.get(j).getWay().get(k).getOtherStarter()) {
+                                    chemins.get(j).getWay().get(k).getCase().setType(chemins.get(j).getWay().get(k).getLastType());
+                                } else {
+                                    chemins.get(j).getWay().get(k).getCase().setType(chemins.get(j).getWay().get(k).getFirstType());
+                                }
                             }
                         }
                     }
@@ -580,6 +590,7 @@ public class Chemin {
             } else {
                 this.getWay().get(i).getCase().setType(CaseType.empty);
             }
+            this.getWay().get(i).update();
         }
     }
 
@@ -599,20 +610,20 @@ public class Chemin {
         chemins.add(this);
     }
 
-    public void checkGoodChemin(List<Chemin> chemins) {
-        if (this.getStart() != null) {
-            for (int i = 0; i < this.getWayWithoutStartAndStop().size(); ++i) {
+    public boolean checkGoodChemin() {
+        if (this.getStart() != null && this.getWay().size() > 2) {
+            for (int i = 0; i < this.getWay().size() - 1; ++i) {
 
                 //On vérifie que toutes les cases du chemin se suivent
                 if (!(this.getWay().get(i).getCase().getX() == (this.getWay().get(i + 1).getCase().getX() + 1))
                         && !(this.getWay().get(i).getCase().getX() == (this.getWay().get(i + 1).getCase().getX() - 1))
                         && !(this.getWay().get(i).getCase().getY() == (this.getWay().get(i + 1).getCase().getY() + 1))
                         && !(this.getWay().get(i).getCase().getY() == (this.getWay().get(i + 1).getCase().getY() - 1))) {
-                    //this.deleteChemin(chemins);
-                    break;
+                    return false;
                 }
             }
         }
+        return true;
     }
 
 }

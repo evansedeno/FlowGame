@@ -298,10 +298,21 @@ public class VueControleurMenu extends JFrame {
 
         validate.addActionListener(e -> {
             String userstr = usernamefield.getText();
-            user = files.getUserByUsername(userstr);
-            if (user.getUsername().equals("")) user.setUsername(userstr);
-            menuPane.removeAll();
-            drawMainMenu();
+            if (!userstr.equals("")) {
+                user = files.getUserByUsername(userstr);
+                boolean playerexist = false;
+                for (User player : users) {
+                    if (player.getUsername().equals(user.getUsername())) {
+                        playerexist = true;
+                        break;
+                    }
+                }
+                if (!playerexist) {
+                    users.add(user);
+                }
+                menuPane.removeAll();
+                drawMainMenu();
+            }
         });
 
         username.add(validate);
