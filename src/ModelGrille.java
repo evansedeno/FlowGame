@@ -17,7 +17,7 @@ public class ModelGrille {
      * @author Evan SEDENO
      * @brief Constructeur de la class ModelGrille
      * @details - On assigne la valeur de chaque paramètre à chaque attribut
-     * - On instancie une nouvelle matrice de VueCase avec comme taille la taille passée en paramètre
+     * @details - On instancie une nouvelle matrice de VueCase avec comme taille la taille passée en paramètre
      */
     public ModelGrille(int size, int level) {
         this.size = size;
@@ -49,7 +49,7 @@ public class ModelGrille {
      * @author Evan SEDENO
      * @brief Remplis la grille en fonction du niveau demandé
      * @details - Pour chaque case de la matrice tabCV, on créer un objet VueCase
-     * - On récupère le type de la case grâce à la méthode getTypeInFile de la class Files et on l'assigne à l'objet VueCase
+     * @details - On récupère le type de la case grâce à la méthode getTypeInFile de la class Files et on l'assigne à l'objet VueCase
      */
     public void generateGrille() {
         Files file = new Files();
@@ -78,7 +78,7 @@ public class ModelGrille {
      * @author Evan SEDENO
      * @brief Vérifie s'il reste des cases vides
      * @details - Pour chaque case de la matrice tabCV, on vérifie si le type de la case est vide
-     * - Si une case est vide on retourne faux sinon on retourne vrai
+     * @details - Si une case est vide on retourne faux sinon on retourne vrai
      */
     public boolean validateGrille() {
         for (int i = 0; i < this.getSize(); ++i) {

@@ -78,7 +78,7 @@ public class VueCase extends JPanel {
      * @author Frédéric ARMETTA & Evan SEDENO
      * @brief Dessine une part de chemin (Nord)
      * @details - On assigne la couleur en fonction de la couleur du starter
-     * - (Le code en commentaire est une alternative d'affichage)
+     * @details - (Le code en commentaire est une alternative d'affichage)
      */
     private void drawNoon(Graphics g) {
         g.setColor(this.getColor());
@@ -91,7 +91,7 @@ public class VueCase extends JPanel {
      * @author Frédéric ARMETTA & Evan SEDENO
      * @brief Dessine une part de chemin (Ouest)
      * @details - On assigne la couleur en fonction de la couleur du starter
-     * - (Le code en commentaire est une alternative d'affichage)
+     * @details - (Le code en commentaire est une alternative d'affichage)
      */
     private void drawNine(Graphics g) {
         g.setColor(this.getColor());
@@ -104,7 +104,7 @@ public class VueCase extends JPanel {
      * @author Frédéric ARMETTA & Evan SEDENO
      * @brief Dessine une part de chemin (Sud)
      * @details - On assigne la couleur en fonction de la couleur du starter
-     * - (Le code en commentaire est une alternative d'affichage)
+     * @details - (Le code en commentaire est une alternative d'affichage)
      */
     private void drawSix(Graphics g) {
         g.setColor(this.getColor());
@@ -117,7 +117,7 @@ public class VueCase extends JPanel {
      * @author Frédéric ARMETTA & Evan SEDENO
      * @brief Dessine une part de chemin (Est)
      * @details - On assigne la couleur en fonction de la couleur du starter
-     * - (Le code en commentaire est une alternative d'affichage)
+     * @details - (Le code en commentaire est une alternative d'affichage)
      */
     private void drawThree(Graphics g) {
         g.setColor(this.getColor());
@@ -130,8 +130,8 @@ public class VueCase extends JPanel {
      * @author Frédéric ARMETTA & Evan SEDENO
      * @brief Dessine l'essemble des composants
      * @details - Dessine un rectangle vide
-     * - En fonction du type de la case, on dessine soit un rond de couleur, soit un chemin ou un croisement
-     * - (Le code en commentaire est une alternative d'affichage)
+     * @details - En fonction du type de la case, on dessine soit un rond de couleur, soit un chemin ou un croisement
+     * @details - (Le code en commentaire est une alternative d'affichage)
      * @see "https://docs.oracle.com/javase/7/docs/api/javax/swing/JComponent.html"
      */
     @Override
@@ -231,9 +231,9 @@ public class VueCase extends JPanel {
      * @author Evan SEDENO
      * @brief Dessine un croisement en fonction des deux chemins
      * @details - On assigne le starter du deuxième chemin à l'attribut otherstarter
-     * - On assigne l'attribut firsttype au type actuel et lasttype à la direction inverse
-     * - On assigne le nouveau type croisement à l'attribut "c"
-     * - On redessine la case
+     * @details - On assigne l'attribut firsttype au type actuel et lasttype à la direction inverse
+     * @details - On assigne le nouveau type croisement à l'attribut "c"
+     * @details - On redessine la case
      */
     public void sendCrossToDraw(Chemin chemin) {
 

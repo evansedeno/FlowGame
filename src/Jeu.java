@@ -19,7 +19,7 @@ public class Jeu {
      * @author Evan SEDENO
      * @brief Constructeur de la class Jeu
      * @details - On assigne la valeur de chaque paramètre à chaque attribut
-     * - On vérifie si l'on créer ou on joue un niveau
+     * @details - On vérifie si l'on créer ou on joue un niveau
      */
     public Jeu(int size, int level, User user) {
         this.size = size;

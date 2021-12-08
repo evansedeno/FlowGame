@@ -34,12 +34,12 @@ public class VueControleurGrille extends JFrame {
      * @author Frédéric ARMETTA & Evan SEDENO
      * @brief Constructeur de la class VueControleurGrille
      * @details - On assigne la valeur des attributs size, _level et user avec les 3 paramètres
-     * - On définit certains paramètres sur le JFrame (fermeture de la fenêtre, taille de la fenêtre et pas redimensionnable)
-     * - On assigne aux 3 attributs JPanel une instanciation de JPanel
-     * - On assigne à l'attribut grille une nouvelle grille
-     * - On vérifie si l'on souhaite jouer ou créer un niveau et on appelle les méthodes requises
-     * - On ajoute la grille à la vue et on ajoute les listeners
-     * - On ajoute tous les panels à la vue
+     * @details - On définit certains paramètres sur le JFrame (fermeture de la fenêtre, taille de la fenêtre et pas redimensionnable)
+     * @details - On assigne aux 3 attributs JPanel une instanciation de JPanel
+     * @details - On assigne à l'attribut grille une nouvelle grille
+     * @details - On vérifie si l'on souhaite jouer ou créer un niveau et on appelle les méthodes requises
+     * @details - On ajoute la grille à la vue et on ajoute les listeners
+     * @details - On ajoute tous les panels à la vue
      */
     public VueControleurGrille(int size, int _level, User user) {
 
@@ -158,7 +158,7 @@ public class VueControleurGrille extends JFrame {
      * @author Evan SEDENO
      * @brief Dessine les cases du dernier chemin
      * @details - On appelle la méthode assignType sur le dernier chemin
-     * - On redessine les cases
+     * @details - On redessine les cases
      */
     public void drawCases() {
         //On réassigne chaque case
@@ -170,10 +170,10 @@ public class VueControleurGrille extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche l'écran de fin du jeu
      * @details - On créer un nouveau JPanel pour l'affichage de l'écran de fin
-     * - On créer les différents text
-     * - On Ajoute les points au joueur et on l'actualise dans le fichier "users.json"
-     * - On créer un bouton retour avec un listener qui va créer une nouvelle instance de la classe VueControleurMenu
-     * - On ferme la fenêtre de jeu si on appuie sur le bouton
+     * @details - On créer les différents text
+     * @details - On Ajoute les points au joueur et on l'actualise dans le fichier "users.json"
+     * @details - On créer un bouton retour avec un listener qui va créer une nouvelle instance de la classe VueControleurMenu
+     * @details - On ferme la fenêtre de jeu si on appuie sur le bouton
      */
     public void endGame() {
 
@@ -241,9 +241,9 @@ public class VueControleurGrille extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche l'écran de fin de la création de niveau
      * @details - On créer un nouveau JPanel pour la fin de création de niveau
-     * - On créer les différents text
-     * - On créer un bouton retour avec un listener qui va créer une nouvelle instance de la classe VueControleurMenu
-     * - On ferme la fenêtre de jeu si on appuie sur le bouton
+     * @details - On créer les différents text
+     * @details - On créer un bouton retour avec un listener qui va créer une nouvelle instance de la classe VueControleurMenu
+     * @details - On ferme la fenêtre de jeu si on appuie sur le bouton
      */
     public void displayCreationFinished() {
 
@@ -281,7 +281,7 @@ public class VueControleurGrille extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche le bouton de validation de la création du niveau
      * @details - On créer un bouton valider avec un listener qui sauvegarde le niveau et qui appelle la méthode displayCreationFinished
-     * - On ajoute le bouton à la vue
+     * @details - On ajoute le bouton à la vue
      */
     public void displayValidateButton() {
         Files file = new Files();
@@ -306,10 +306,10 @@ public class VueControleurGrille extends JFrame {
      * @author Evan SEDENO
      * @brief Créer le listener quand la souris est entré
      * @details - On vérifie si on a le bouton de la souris pressé et qu'il existe au moins un chemin
-     * - On vérifie si la case est bloqué si oui on appelle la méthode pour relâcher la souris
-     * - On vérifie si la case est un tournant ou que la case est déjà enregistré dans le dernier chemin, si oui alors on appelle la méthode pour relâcher la souris
-     * - On vérifie si la case est vide ou que c'est un chemin, si non on appelle la méthode pour relâcher la souris
-     * - On vérifie si la case est apte à être dessiné, si oui on appelle la méthode pour la dessiner, si non on appelle la méthode pour relâcher la souris
+     * @details - On vérifie si la case est bloqué si oui on appelle la méthode pour relâcher la souris
+     * @details - On vérifie si la case est un tournant ou que la case est déjà enregistré dans le dernier chemin, si oui alors on appelle la méthode pour relâcher la souris
+     * @details - On vérifie si la case est vide ou que c'est un chemin, si non on appelle la méthode pour relâcher la souris
+     * @details - On vérifie si la case est apte à être dessiné, si oui on appelle la méthode pour la dessiner, si non on appelle la méthode pour relâcher la souris
      */
     public void mouseEnteredListener(VueCase mycase) {
 
@@ -347,8 +347,8 @@ public class VueControleurGrille extends JFrame {
      * @author Evan SEDENO
      * @brief Créer le listener quand la souris est appuyé
      * @details - On vérifie si on créer ou on joue
-     * - Si c'est une creation alors on appelle la méthode setNextNumber sur la case
-     * - Si c'est un jeu alors on vérifie si la case est bloqué, si oui on créer un nouveau chemin
+     * @details - Si c'est une creation alors on appelle la méthode setNextNumber sur la case
+     * @details - Si c'est un jeu alors on vérifie si la case est bloqué, si oui on créer un nouveau chemin
      */
     public void mousePressedListener(VueCase mycase) {
         //On vérifie si on créer la grille ou si on joue
@@ -384,9 +384,9 @@ public class VueControleurGrille extends JFrame {
      * @author Evan SEDENO
      * @brief Créer le listener quand la souris est relâché
      * @details - On vérifie s'il y a au moins un chemin, si la case est bloquée et que la souris est pressé
-     * - On vérifie le type de la case, si c'est le même type que la case départ du chemin alors on termine le chemin, sinon on supprime le chemin
-     * - On vérifie si l'on a fini le niveau
-     * - On vérifie que le dernier niveau est valide
+     * @details - On vérifie le type de la case, si c'est le même type que la case départ du chemin alors on termine le chemin, sinon on supprime le chemin
+     * @details - On vérifie si l'on a fini le niveau
+     * @details - On vérifie que le dernier niveau est valide
      */
     public void mouseReleaseListener(VueCase mycase) {
         if (this.ways.size() > 0 && mycase.getCase().isLocked() && this.clicked) {

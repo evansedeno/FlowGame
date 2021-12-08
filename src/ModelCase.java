@@ -18,7 +18,7 @@ public class ModelCase {
      * @author Evan SEDENO
      * @brief Constructeur de la class ModelCase
      * @details - On définit les valeurs des attributs x, y et type avec les trois paramètres
-     * - Si le type de la case est n'est pas vide alors on regarde si son type correspond à une couleur, si oui on l'a bloque
+     * @details - Si le type de la case est n'est pas vide alors on regarde si son type correspond à une couleur, si oui on l'a bloque
      */
     public ModelCase(int x, int y, CaseType type) {
         this.x = x;
@@ -163,8 +163,8 @@ public class ModelCase {
      * @author Evan SEDENO
      * @brief Compare deux objets de type ModelCase
      * @details - On retourne vrai si l'adresse mémoire est la même pour les deux objets
-     * - On retourne faux si l'objet n'est pas de la même classe
-     * - On retourne vrais si les attributs des deux objets correspondent
+     * @details - On retourne faux si l'objet n'est pas de la même classe
+     * @details - On retourne vrais si les attributs des deux objets correspondent
      * @see "https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html"
      */
     @Override

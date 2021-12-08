@@ -22,8 +22,8 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Constructeur de la class VueControleurMenu
      * @details - On définit certains paramètres sur le JFrame (fermeture de la fenêtre, taille de la fenêtre et pas redimensionnable)
-     * - On appelle la méthode drawUsernameMenu()
-     * - On rend le JFrame visible
+     * @details - On appelle la méthode drawUsernameMenu()
+     * @details - On rend le JFrame visible
      */
     public VueControleurMenu() {
         //On définit certains réglages pour le JFrame
@@ -50,12 +50,12 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Envoie dans le JPanel du menu le text avec le nom du projet
      * @details - On ajoute un espace
-     * - On créer un nouveau JLabel avec comme text "FLOWGAME"
-     * - On définit l'alignement du text en centré
-     * - On créer une nouvelle police
-     * - On définit la couleur du text en blanc
-     * - On définit la police du text avec la police précédemment créée
-     * - On ajoute le nouveau text au JPanel du Menu
+     * @details - On créer un nouveau JLabel avec comme text "FLOWGAME"
+     * @details - On définit l'alignement du text en centré
+     * @details - On créer une nouvelle police
+     * @details - On définit la couleur du text en blanc
+     * @details - On définit la police du text avec la police précédemment créée
+     * @details - On ajoute le nouveau text au JPanel du Menu
      */
     public void drawTitle() {
         //On ajoute au JPanel du menu le nom du jeu
@@ -75,11 +75,11 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Envoie dans le JPanel du menu le text avec le nom du projet
      * @details - On créer un nouveau JLabel avec comme text passé en paramètre
-     * - On définit l'alignement du text en centré
-     * - On créer une nouvelle police
-     * - On définit la couleur du text en blanc
-     * - On définit la police du text avec la police précédemment créée
-     * - On ajoute le nouveau text au JPanel passé en paramètre
+     * @details - On définit l'alignement du text en centré
+     * @details - On créer une nouvelle police
+     * @details - On définit la couleur du text en blanc
+     * @details - On définit la police du text avec la police précédemment créée
+     * @details - On ajoute le nouveau text au JPanel passé en paramètre
      */
     public void drawText(String text, int size, JPanel pane) {
         //On créer et on ajoute un JLabel au JPanel passé en paramètre
@@ -95,12 +95,12 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Définie certains paramètres du JPanel Menu
      * @details - On supprime tous les éléments présents dans le JPanel Menu
-     * - On ajoute un espace
-     * - On ajoute le titre du jeu
-     * - On ajoute un espace
-     * - On définit l'alignement en centré
-     * - On définit la couleur du fond en gris foncé
-     * - On définit la taille du JPanel
+     * @details - On ajoute un espace
+     * @details - On ajoute le titre du jeu
+     * @details - On ajoute un espace
+     * @details - On définit l'alignement en centré
+     * @details - On définit la couleur du fond en gris foncé
+     * @details - On définit la taille du JPanel
      */
     public void setMenuPaneConf() {
         //On définit plusieurs paramètres pour le JPanel du menu
@@ -117,11 +117,11 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche le menu principal
      * @details - On appelle la méthode setMenuPaneConf pour définir certains paramètres du JPanel
-     * - On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
-     * - On créer 3 boutons (Création d'un niveau, jouer un niveau et afficher les points)
-     * - On définit des paramètres aux boutons (Taille, couleur et police)
-     * - On créer 3 listeners pour les 3 boutons
-     * - On ajoute tout le contenu au JPanel du Menu
+     * @details - On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
+     * @details - On créer 3 boutons (Création d'un niveau, jouer un niveau et afficher les points)
+     * @details - On définit des paramètres aux boutons (Taille, couleur et police)
+     * @details - On créer 3 listeners pour les 3 boutons
+     * @details - On ajoute tout le contenu au JPanel du Menu
      */
     public void drawMainMenu() {
         //On définit les paramètres du JPanel Menu
@@ -185,12 +185,12 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche le menu de selection de la taille du niveau
      * @details - On appelle la méthode setMenuPaneConf pour définir certains paramètres du JPanel
-     * - On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
-     * - On créer un text pour demander de choisir la taille du niveau
-     * - On récupère la liste de toutes les tailles disponible
-     * - On affiche un bouton avec un listener pour chaque taille disponible (avec un appel de la méthode appropriée)
-     * - On créer un bouton retour
-     * - On ajoute tout le contenu au JPanel du Menu
+     * @details - On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
+     * @details - On créer un text pour demander de choisir la taille du niveau
+     * @details - On récupère la liste de toutes les tailles disponible
+     * @details - On affiche un bouton avec un listener pour chaque taille disponible (avec un appel de la méthode appropriée)
+     * @details - On créer un bouton retour
+     * @details - On ajoute tout le contenu au JPanel du Menu
      */
     public void drawSizesMenu(boolean iscreation) {
         //On définit les paramètres du JPanel Menu
@@ -248,12 +248,12 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche le menu de selection du niveau
      * @details - On appelle la méthode setMenuPaneConf pour définir certains paramètres du JPanel
-     * - On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
-     * - On créer un text pour demander de choisir la taille du niveau
-     * - On récupère la liste de tous les niveaux disponible
-     * - On affiche un bouton avec un listener pour chaque niveau disponible (avec une instanciation de la class Jeu)
-     * - On créer un bouton retour
-     * - On ajoute tout le contenu au JPanel du Menu
+     * @details - On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
+     * @details - On créer un text pour demander de choisir la taille du niveau
+     * @details - On récupère la liste de tous les niveaux disponible
+     * @details - On affiche un bouton avec un listener pour chaque niveau disponible (avec une instanciation de la class Jeu)
+     * @details - On créer un bouton retour
+     * @details - On ajoute tout le contenu au JPanel du Menu
      */
     public void drawLevelsMenu(int size) {
         //On définit les paramètres du JPanel Menu
@@ -306,13 +306,13 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche le menu du classement des utilisateurs
      * @details - On appelle la méthode setMenuPaneConf pour définir certains paramètres du JPanel
-     * - On récupère le nombre d'utilisateurs
-     * - On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
-     * - On créer un text pour montrer les points de joueurs
-     * - On récupère la liste de tous les joueurs et on l'a tri par ordre décroissant des points
-     * - On créer un JPanel pour chaque joueur avec son nom et son nombre de points
-     * - On créer un bouton retour
-     * - On ajoute tout le contenu au JPanel du Menu
+     * @details - On récupère le nombre d'utilisateurs
+     * @details - On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
+     * @details - On créer un text pour montrer les points de joueurs
+     * @details - On récupère la liste de tous les joueurs et on l'a tri par ordre décroissant des points
+     * @details - On créer un JPanel pour chaque joueur avec son nom et son nombre de points
+     * @details - On créer un bouton retour
+     * @details - On ajoute tout le contenu au JPanel du Menu
      */
     public void drawPointsMenu() {
         //On définit les paramètres du JPanel Menu
@@ -367,12 +367,12 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche le menu de selection du nom d'utilisateur
      * @details - On appelle la méthode setMenuPaneConf pour définir certains paramètres du JPanel
-     * - On créer un JPanel et on lui donne certains paramètres (Couleur du fond et disposition)
-     * - On créer un text pour demander de choisir le nom d'utilisateur
-     * - On créer un champ de text et lui donne certains paramètres (Couleur du fond taille et police)
-     * - On créer un bouton valider
-     * - On créer un listener pour le bouton valider (avec l'attribution de l'attribut user par le nom d'utilisateur et un appel de la méthode drawMainMenu())
-     * - On ajoute tout le contenu au JPanel du Menu
+     * @details - On créer un JPanel et on lui donne certains paramètres (Couleur du fond et disposition)
+     * @details - On créer un text pour demander de choisir le nom d'utilisateur
+     * @details - On créer un champ de text et lui donne certains paramètres (Couleur du fond taille et police)
+     * @details - On créer un bouton valider
+     * @details - On créer un listener pour le bouton valider (avec l'attribution de l'attribut user par le nom d'utilisateur et un appel de la méthode drawMainMenu())
+     * @details - On ajoute tout le contenu au JPanel du Menu
      */
     public void drawUsernameMenu() {
         //On définit les paramètres du JPanel Menu
@@ -433,8 +433,8 @@ public class VueControleurMenu extends JFrame {
      * @author Evan SEDENO
      * @brief Affiche le menu de selection du nom d'utilisateur
      * @details - On créer un JButton avec le text "RETOUR"
-     * - On donne certains paramètres au bouton (Taille, couleur du fond, bordures et police)
-     * - On retourne le JButton
+     * @details - On donne certains paramètres au bouton (Taille, couleur du fond, bordures et police)
+     * @details - On retourne le JButton
      */
     public JButton drawReturnButton() {
         //On renvoie un bouton retour

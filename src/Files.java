@@ -19,8 +19,8 @@ public class Files {
      * @author Evan SEDENO
      * @brief Récupère l'identifiant du prochain niveau créable
      * @details - On récupère la liste des fichiers dans le dossier de la taille choisie
-     * - On vérifie si un niveau existe déjà dans la taille choisie
-     * - On renvoie l'identifiant du prochain niveau
+     * @details - On vérifie si un niveau existe déjà dans la taille choisie
+     * @details - On renvoie l'identifiant du prochain niveau
      */
     public int getNextLevel(int size) {
         //On récupère la liste des niveaux
@@ -46,8 +46,8 @@ public class Files {
      * @author Evan SEDENO
      * @brief Remplis le fichier text du nouveau niveau
      * @details - On récupère le type de chaque case et on l'ajoute à la String casesType
-     * - On créer un nouveau fichier au bon emplacement par rapport à la taille et à l'identifiant du niveau
-     * - On écrit dans le fichier la String remplis plus haut
+     * @details - On créer un nouveau fichier au bon emplacement par rapport à la taille et à l'identifiant du niveau
+     * @details - On écrit dans le fichier la String remplis plus haut
      */
     public void writeLevelFile(int size, int level, ModelGrille grille) {
 
@@ -77,9 +77,9 @@ public class Files {
      * @author Evan SEDENO
      * @brief Récupère la liste des tailles disponibles
      * @details - On ouvre le dossier "levels"
-     * - On récupère la liste des dossiers correspondant aux tailles
-     * - On récupère pour chaque dossier son nom sous forme d'entier
-     * - On renvoie la liste des tailles
+     * @details - On récupère la liste des dossiers correspondant aux tailles
+     * @details - On récupère pour chaque dossier son nom sous forme d'entier
+     * @details - On renvoie la liste des tailles
      */
     public int[] getAllSizes() {
 
@@ -100,9 +100,9 @@ public class Files {
      * @author Evan SEDENO
      * @brief Récupère la liste des niveaux disponibles
      * @details - On ouvre le dossier de la taille passé en paramètre
-     * - On récupère la liste des fichiers correspondant aux niveaux
-     * - On récupère pour chaque fichier son nom sous forme d'entier
-     * - On renvoie la liste des niveaux
+     * @details - On récupère la liste des fichiers correspondant aux niveaux
+     * @details - On récupère pour chaque fichier son nom sous forme d'entier
+     * @details - On renvoie la liste des niveaux
      */
     public int[] getAllLevels(int size) {
 
@@ -127,8 +127,8 @@ public class Files {
      * @author Evan SEDENO
      * @brief Récupère le type d'une case en fonction d'un niveau et d'une position
      * @details - On lit le fichier text du niveau correspondant
-     * - On parcourt l'ensemble des mots et les stocks dans une liste de String
-     * - On renvoie la valeur CaseType du mot voulu à la position donnée en paramètre
+     * @details - On parcourt l'ensemble des mots et les stocks dans une liste de String
+     * @details - On renvoie la valeur CaseType du mot voulu à la position donnée en paramètre
      */
     public CaseType getTypeInFile(int size, int level, int x, int y) {
         CaseType mycase;
@@ -172,8 +172,8 @@ public class Files {
      * @author Evan SEDENO
      * @brief Récupère la liste des joueurs
      * @details - On ouvre le fichier users.json
-     * - Pour chaque utilisateur (séparé par "{" et "}") on récupère son identifiant, nom et points
-     * - On renvoie la liste des utilisateurs
+     * @details - Pour chaque utilisateur (séparé par "{" et "}") on récupère son identifiant, nom et points
+     * @details - On renvoie la liste des utilisateurs
      */
     public ArrayList<User> getAllUsers() {
         ArrayList<User> users = new ArrayList<>();
@@ -207,7 +207,7 @@ public class Files {
      * @author Evan SEDENO
      * @brief Récupère un utilisateur par son nom
      * @details - On récupère la liste des utilisateurs
-     * - Pour chaque utilisateur on vérifie son nom, si ça correspond on le renvoie sinon on en renvoie un nouveau
+     * @details - Pour chaque utilisateur on vérifie son nom, si ça correspond on le renvoie sinon on en renvoie un nouveau
      */
     public User getUserByUsername(String username) {
         //On récupère la liste des utilisateurs
@@ -227,8 +227,8 @@ public class Files {
      * @author Evan SEDENO
      * @brief Récupère l'identifiant du dernier utilisateur créé
      * @details - On récupère la liste de tous les utilisateurs
-     * - On vérifie lequel est le plus élevé
-     * - On renvoie le dernier identifiant
+     * @details - On vérifie lequel est le plus élevé
+     * @details - On renvoie le dernier identifiant
      */
     public int getMaxId() {
         //On récupère tous les utilisateurs
@@ -247,8 +247,8 @@ public class Files {
      * @author Evan SEDENO
      * @brief Remplace le contenu du fichier "users.json" par les joueurs actuels
      * @details - On créer une liste de String dans laquelle on va mettre chaque utilisateur
-     * - Pour chaque utilisateur de la liste passé en paramètre, on ajoute à la liste de String chaque ligne pour créer un nouvel objet JSON
-     * - On remplace le contenu du fichier "users.json" par chaque ligne de la liste de String
+     * @details - Pour chaque utilisateur de la liste passé en paramètre, on ajoute à la liste de String chaque ligne pour créer un nouvel objet JSON
+     * @details - On remplace le contenu du fichier "users.json" par chaque ligne de la liste de String
      */
     public void actualizeUsers(ArrayList<User> users) {
         //On créer une liste de String

@@ -75,7 +75,7 @@ public class Chemin {
      * @author Evan SEDENO
      * @brief Mutateur de l'attribut stop
      * @details - On assigne la valeur du paramètre stop à l'attribut stop
-     * - On rajoute à la liste des VueCase du chemin la VueCase stop en paramètre
+     * @details - On rajoute à la liste des VueCase du chemin la VueCase stop en paramètre
      */
     public void setStop(VueCase stop) {
         this.stop = stop;
@@ -87,8 +87,8 @@ public class Chemin {
      * @author Evan SEDENO
      * @brief Mutateur de l'attribut start
      * @details - On assigne la valeur du paramètre stop à l'attribut start
-     * - On ajoute la case à la liste des cases du chemin
-     * - On appelle la methode de la VueCase pour assigner un depart avec la VueCase passé en paramètre le start
+     * @details - On ajoute la case à la liste des cases du chemin
+     * @details - On appelle la methode de la VueCase pour assigner un depart avec la VueCase passé en paramètre le start
      */
     public void setStart(VueCase start) {
         this.start = start;
@@ -111,8 +111,8 @@ public class Chemin {
      * @author Evan SEDENO
      * @brief Appel des 3 méthodes pour la construction du chemin
      * @details - On appelle la méthode pour faire les directions
-     * - On appelle la méthode pour faire les tournants
-     * - On appelle la méthode pour faire les croisements
+     * @details - On appelle la méthode pour faire les tournants
+     * @details - On appelle la méthode pour faire les croisements
      */
     public void assignType(List<Chemin> chemins) {
         this.makeDirections();
@@ -124,8 +124,8 @@ public class Chemin {
      * @author Evan SEDENO
      * @brief Création des tournants par appel des 4 méthodes pour les 4 directions
      * @details - Pour chaque case du chemin on récupère la case précédente, la case actuelle et la suivante
-     * - On appelle les 4 méthodes pour faire les 4 types tournants
-     * - On redessine la case actuelle
+     * @details - On appelle les 4 méthodes pour faire les 4 types tournants
+     * @details - On redessine la case actuelle
      */
     public void makeTurns() {
         //Pour chaque case du chemin on dessine le bon tournant avec l'appelle des 4 méthodes ci-dessous
@@ -147,9 +147,9 @@ public class Chemin {
      * @author Evan SEDENO
      * @brief Création des croisements
      * @details - On retire le chemin actuel de la liste des chemins
-     * - Pour chaque case de chaque chemin de la liste passé en paramètre on vérifie si le chemin actuel contient une des cases
-     * - On appelle la méthode pour dessiner le croisement
-     * - On rajoute le chemin actuel dans la liste des chemins
+     * @details - Pour chaque case de chaque chemin de la liste passé en paramètre on vérifie si le chemin actuel contient une des cases
+     * @details - On appelle la méthode pour dessiner le croisement
+     * @details - On rajoute le chemin actuel dans la liste des chemins
      */
     public void makeCross(List<Chemin> chemins) {
         //On retire le chemin actuel de la liste des chemins
@@ -175,8 +175,8 @@ public class Chemin {
      * @author Evan SEDENO
      * @brief Création des directions
      * @details - Pour chaque case du chemin, on récupère la case précédente et celle à dessiner
-     * - On vérifie les conditions en fonction de la position de la case précédente pour dessiner la direction
-     * - On actualise la case
+     * @details - On vérifie les conditions en fonction de la position de la case précédente pour dessiner la direction
+     * @details - On actualise la case
      */
     public void makeDirections() {
         //On parcourt l'ensemble des cases du chemin
@@ -724,7 +724,7 @@ public class Chemin {
      * @author Evan SEDENO
      * @brief Vérifie si le chemin est valide
      * @details - On regarde si toutes les cases du chemin se suivent avec leur position
-     * - On renvoie vrai si le chemin est bon et faux si non
+     * @details - On renvoie vrai si le chemin est bon et faux si non
      */
     public boolean checkGoodChemin() {
         //On vérifie si la taille du chemin est supérieur à 2 cases et que le départ soit valide
@@ -749,10 +749,10 @@ public class Chemin {
      * @author Evan SEDENO
      * @brief Supprime le chemin
      * @details - On parcourt l'ensemble des cases du chemin
-     * - On vérifie si le type de la case est un croisement sinon on remet le type à vide
-     * - On parcourt l'ensemble des cases des chemins passé en paramètre et on vérifie si le type est un croisement et que les deux cases parcourent sont les mêmes
-     * - On replace le croisement par l'ancien type de la case de l'autre chemin
-     * - On redessine la case
+     * @details - On vérifie si le type de la case est un croisement sinon on remet le type à vide
+     * @details - On parcourt l'ensemble des cases des chemins passé en paramètre et on vérifie si le type est un croisement et que les deux cases parcourent sont les mêmes
+     * @details - On replace le croisement par l'ancien type de la case de l'autre chemin
+     * @details - On redessine la case
      */
     public void deleteChemin(List<Chemin> chemins) {
         //On parcourt chaque case du chemin
