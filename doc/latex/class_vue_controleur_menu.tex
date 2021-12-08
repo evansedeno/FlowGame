@@ -1,0 +1,548 @@
+\hypertarget{class_vue_controleur_menu}{}\doxysection{Référence de la classe Vue\+Controleur\+Menu}
+\label{class_vue_controleur_menu}\index{VueControleurMenu@{VueControleurMenu}}
+Graphe d\textquotesingle{}héritage de Vue\+Controleur\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vue_controleur_menu}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vue_controleur_menu_ac913a35f5482e7028fc1ef84efb69e3f}{Vue\+Controleur\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la class \mbox{\hyperlink{class_vue_controleur_menu}{Vue\+Controleur\+Menu}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_a03ec2e728a3b965832d63e47359ef279}{set\+User}} (\mbox{\hyperlink{class_user}{User}} \mbox{\hyperlink{class_vue_controleur_menu_a3e513f1b9b6e0e329419edd21678bf71}{user}})
+\begin{DoxyCompactList}\small\item\em Mutateur de l\textquotesingle{}attribut user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_ae62882baba018c483257e4f29677140e}{draw\+Title}} ()
+\begin{DoxyCompactList}\small\item\em Envoie dans le JPanel du menu le text avec le nom du projet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_ad1cbe490e449102cef1372dec42e0375}{draw\+Text}} (String text, int size, JPanel pane)
+\begin{DoxyCompactList}\small\item\em Envoie dans le JPanel du menu le text avec le nom du projet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_a2029b4994bc1e034aa05cc100eb6a194}{set\+Menu\+Pane\+Conf}} ()
+\begin{DoxyCompactList}\small\item\em Définie certains paramètres du JPanel Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_a393cdf29726a0de182444bbc394250b3}{draw\+Main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu principal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_a946bcbee1f05229739331577cc54b1b7}{draw\+Sizes\+Menu}} (boolean iscreation)
+\begin{DoxyCompactList}\small\item\em Affiche le menu de selection de la taille du niveau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_a1f52b2ee9ce1e57e3eea0960e0a1b578}{draw\+Levels\+Menu}} (int size)
+\begin{DoxyCompactList}\small\item\em Affiche le menu de selection du niveau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_aa0faac7e1a169e9a7020ae735fb62de7}{draw\+Points\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu du classement des utilisateurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_controleur_menu_a5c375e52606cd4bc947e8f7e9df83bfe}{draw\+Username\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu de selection du nom d\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+JButton \mbox{\hyperlink{class_vue_controleur_menu_a2b475466be6fd9357ec0778a4220f3e1}{draw\+Return\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu de selection du nom d\textquotesingle{}utilisateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+final JPanel \mbox{\hyperlink{class_vue_controleur_menu_aebc298c4e7810bf241868f00295841c0}{menu\+Pane}} = new JPanel()
+\item 
+final Font \mbox{\hyperlink{class_vue_controleur_menu_a7f9bd6cf191a63dd2dbbd0582685865d}{buttonfont}} = new Font(\char`\"{}buttonfont\char`\"{}, Font.\+BOLD, 20)
+\item 
+\mbox{\hyperlink{class_user}{User}} \mbox{\hyperlink{class_vue_controleur_menu_a3e513f1b9b6e0e329419edd21678bf71}{user}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés statiques}
+\begin{DoxyCompactItemize}
+\item 
+static final int \mbox{\hyperlink{class_vue_controleur_menu_a6a79e66a349fa7d7bee941a3664d4b11}{PIXEL\+\_\+\+PER\+\_\+\+SQUARE}} = 60
+\item 
+static final int \mbox{\hyperlink{class_vue_controleur_menu_a80314c7e71f912828dfc15502d97e86a}{SIZE\+\_\+\+WINDOWS}} = 5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_vue_controleur_menu_ac913a35f5482e7028fc1ef84efb69e3f}\label{class_vue_controleur_menu_ac913a35f5482e7028fc1ef84efb69e3f}} 
+\index{VueControleurMenu@{VueControleurMenu}!VueControleurMenu@{VueControleurMenu}}
+\index{VueControleurMenu@{VueControleurMenu}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{VueControleurMenu()}{VueControleurMenu()}}
+{\footnotesize\ttfamily Vue\+Controleur\+Menu.\+Vue\+Controleur\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la class \mbox{\hyperlink{class_vue_controleur_menu}{Vue\+Controleur\+Menu}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On définit certains paramètres sur le JFrame (fermeture de la fenêtre, taille de la fenêtre et pas redimensionnable)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On appelle la méthode \mbox{\hyperlink{class_vue_controleur_menu_a5c375e52606cd4bc947e8f7e9df83bfe}{draw\+Username\+Menu()}}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On rend le JFrame visible 
+\end{DoxyItemize}
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_vue_controleur_menu_a1f52b2ee9ce1e57e3eea0960e0a1b578}\label{class_vue_controleur_menu_a1f52b2ee9ce1e57e3eea0960e0a1b578}} 
+\index{VueControleurMenu@{VueControleurMenu}!drawLevelsMenu@{drawLevelsMenu}}
+\index{drawLevelsMenu@{drawLevelsMenu}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{drawLevelsMenu()}{drawLevelsMenu()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+draw\+Levels\+Menu (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu de selection du niveau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em size} & \mbox{[}int\mbox{]} Taille des niveaux \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On appelle la méthode set\+Menu\+Pane\+Conf pour définir certains paramètres du JPanel
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un text pour demander de choisir la taille du niveau
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On récupère la liste de tous les niveaux disponible
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On affiche un bouton avec un listener pour chaque niveau disponible (avec une instanciation de la class \mbox{\hyperlink{class_jeu}{Jeu}})
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un bouton retour
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute tout le contenu au JPanel du Menu 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_a393cdf29726a0de182444bbc394250b3}\label{class_vue_controleur_menu_a393cdf29726a0de182444bbc394250b3}} 
+\index{VueControleurMenu@{VueControleurMenu}!drawMainMenu@{drawMainMenu}}
+\index{drawMainMenu@{drawMainMenu}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{drawMainMenu()}{drawMainMenu()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+draw\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu principal. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On appelle la méthode set\+Menu\+Pane\+Conf pour définir certains paramètres du JPanel
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer 3 boutons (Création d\textquotesingle{}un niveau, jouer un niveau et afficher les points)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit des paramètres aux boutons (Taille, couleur et police)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer 3 listeners pour les 3 boutons
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute tout le contenu au JPanel du Menu 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_aa0faac7e1a169e9a7020ae735fb62de7}\label{class_vue_controleur_menu_aa0faac7e1a169e9a7020ae735fb62de7}} 
+\index{VueControleurMenu@{VueControleurMenu}!drawPointsMenu@{drawPointsMenu}}
+\index{drawPointsMenu@{drawPointsMenu}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{drawPointsMenu()}{drawPointsMenu()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+draw\+Points\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu du classement des utilisateurs. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On appelle la méthode set\+Menu\+Pane\+Conf pour définir certains paramètres du JPanel
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On récupère le nombre d\textquotesingle{}utilisateurs
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un text pour montrer les points de joueurs
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On récupère la liste de tous les joueurs et on l\textquotesingle{}a tri par ordre décroissant des points
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un JPanel pour chaque joueur avec son nom et son nombre de points
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un bouton retour
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute tout le contenu au JPanel du Menu 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_a2b475466be6fd9357ec0778a4220f3e1}\label{class_vue_controleur_menu_a2b475466be6fd9357ec0778a4220f3e1}} 
+\index{VueControleurMenu@{VueControleurMenu}!drawReturnButton@{drawReturnButton}}
+\index{drawReturnButton@{drawReturnButton}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{drawReturnButton()}{drawReturnButton()}}
+{\footnotesize\ttfamily JButton Vue\+Controleur\+Menu.\+draw\+Return\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu de selection du nom d\textquotesingle{}utilisateur. 
+
+\begin{DoxyReturn}{Renvoie}
+back\+: \mbox{[}JButton\mbox{]} On retourne le JButton retour 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On créer un JButton avec le text \char`\"{}\+RETOUR\char`\"{}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On donne certains paramètres au bouton (Taille, couleur du fond, bordures et police)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On retourne le JButton 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_a946bcbee1f05229739331577cc54b1b7}\label{class_vue_controleur_menu_a946bcbee1f05229739331577cc54b1b7}} 
+\index{VueControleurMenu@{VueControleurMenu}!drawSizesMenu@{drawSizesMenu}}
+\index{drawSizesMenu@{drawSizesMenu}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{drawSizesMenu()}{drawSizesMenu()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+draw\+Sizes\+Menu (\begin{DoxyParamCaption}\item[{boolean}]{iscreation }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu de selection de la taille du niveau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em iscreation} & \mbox{[}boolean\mbox{]} Variable qui définit si oui ou non on souhaite créer ou jouer un niveau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On appelle la méthode set\+Menu\+Pane\+Conf pour définir certains paramètres du JPanel
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un JPanel et on lui donne certains paramètres (Couleur du fond, taille, disposition, alignement)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un text pour demander de choisir la taille du niveau
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On récupère la liste de toutes les tailles disponible
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On affiche un bouton avec un listener pour chaque taille disponible (avec un appel de la méthode appropriée)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un bouton retour
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute tout le contenu au JPanel du Menu 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_ad1cbe490e449102cef1372dec42e0375}\label{class_vue_controleur_menu_ad1cbe490e449102cef1372dec42e0375}} 
+\index{VueControleurMenu@{VueControleurMenu}!drawText@{drawText}}
+\index{drawText@{drawText}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+draw\+Text (\begin{DoxyParamCaption}\item[{String}]{text,  }\item[{int}]{size,  }\item[{JPanel}]{pane }\end{DoxyParamCaption})}
+
+
+
+Envoie dans le JPanel du menu le text avec le nom du projet. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em text} & \mbox{[}String\mbox{]} Text à afficher dans le JPanel \\
+\hline
+{\em size} & \mbox{[}int\mbox{]} Taille du text \\
+\hline
+{\em pane} & \mbox{[}JPanel\mbox{]} JPanel auquel on va ajouter le text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On créer un nouveau JLabel avec comme text passé en paramètre
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit l\textquotesingle{}alignement du text en centré
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer une nouvelle police
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit la couleur du text en blanc
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit la police du text avec la police précédemment créée
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute le nouveau text au JPanel passé en paramètre 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_ae62882baba018c483257e4f29677140e}\label{class_vue_controleur_menu_ae62882baba018c483257e4f29677140e}} 
+\index{VueControleurMenu@{VueControleurMenu}!drawTitle@{drawTitle}}
+\index{drawTitle@{drawTitle}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{drawTitle()}{drawTitle()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+draw\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Envoie dans le JPanel du menu le text avec le nom du projet. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On ajoute un espace
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un nouveau JLabel avec comme text \char`\"{}\+FLOWGAME\char`\"{}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit l\textquotesingle{}alignement du text en centré
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer une nouvelle police
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit la couleur du text en blanc
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit la police du text avec la police précédemment créée
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute le nouveau text au JPanel du Menu 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_a5c375e52606cd4bc947e8f7e9df83bfe}\label{class_vue_controleur_menu_a5c375e52606cd4bc947e8f7e9df83bfe}} 
+\index{VueControleurMenu@{VueControleurMenu}!drawUsernameMenu@{drawUsernameMenu}}
+\index{drawUsernameMenu@{drawUsernameMenu}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{drawUsernameMenu()}{drawUsernameMenu()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+draw\+Username\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu de selection du nom d\textquotesingle{}utilisateur. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On appelle la méthode set\+Menu\+Pane\+Conf pour définir certains paramètres du JPanel
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un JPanel et on lui donne certains paramètres (Couleur du fond et disposition)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un text pour demander de choisir le nom d\textquotesingle{}utilisateur
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un champ de text et lui donne certains paramètres (Couleur du fond taille et police)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un bouton valider
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On créer un listener pour le bouton valider (avec l\textquotesingle{}attribution de l\textquotesingle{}attribut user par le nom d\textquotesingle{}utilisateur et un appel de la méthode \mbox{\hyperlink{class_vue_controleur_menu_a393cdf29726a0de182444bbc394250b3}{draw\+Main\+Menu()}})
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute tout le contenu au JPanel du Menu 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_a2029b4994bc1e034aa05cc100eb6a194}\label{class_vue_controleur_menu_a2029b4994bc1e034aa05cc100eb6a194}} 
+\index{VueControleurMenu@{VueControleurMenu}!setMenuPaneConf@{setMenuPaneConf}}
+\index{setMenuPaneConf@{setMenuPaneConf}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{setMenuPaneConf()}{setMenuPaneConf()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+set\+Menu\+Pane\+Conf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Définie certains paramètres du JPanel Menu. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On supprime tous les éléments présents dans le JPanel Menu
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute un espace
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute le titre du jeu
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On ajoute un espace
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit l\textquotesingle{}alignement en centré
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit la couleur du fond en gris foncé
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On définit la taille du JPanel 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_controleur_menu_a03ec2e728a3b965832d63e47359ef279}\label{class_vue_controleur_menu_a03ec2e728a3b965832d63e47359ef279}} 
+\index{VueControleurMenu@{VueControleurMenu}!setUser@{setUser}}
+\index{setUser@{setUser}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily void Vue\+Controleur\+Menu.\+set\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Mutateur de l\textquotesingle{}attribut user. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \mbox{[}\mbox{\hyperlink{class_user}{User}}\mbox{]} Utilisateur à attribuer à l\textquotesingle{}attribut user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+On donne à l\textquotesingle{}attribut user la valeur de l\textquotesingle{}\mbox{\hyperlink{class_user}{User}} passé en paramètre 
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_vue_controleur_menu_a7f9bd6cf191a63dd2dbbd0582685865d}\label{class_vue_controleur_menu_a7f9bd6cf191a63dd2dbbd0582685865d}} 
+\index{VueControleurMenu@{VueControleurMenu}!buttonfont@{buttonfont}}
+\index{buttonfont@{buttonfont}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{buttonfont}{buttonfont}}
+{\footnotesize\ttfamily final Font Vue\+Controleur\+Menu.\+buttonfont = new Font(\char`\"{}buttonfont\char`\"{}, Font.\+BOLD, 20)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_vue_controleur_menu_aebc298c4e7810bf241868f00295841c0}\label{class_vue_controleur_menu_aebc298c4e7810bf241868f00295841c0}} 
+\index{VueControleurMenu@{VueControleurMenu}!menuPane@{menuPane}}
+\index{menuPane@{menuPane}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{menuPane}{menuPane}}
+{\footnotesize\ttfamily final JPanel Vue\+Controleur\+Menu.\+menu\+Pane = new JPanel()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_vue_controleur_menu_a6a79e66a349fa7d7bee941a3664d4b11}\label{class_vue_controleur_menu_a6a79e66a349fa7d7bee941a3664d4b11}} 
+\index{VueControleurMenu@{VueControleurMenu}!PIXEL\_PER\_SQUARE@{PIXEL\_PER\_SQUARE}}
+\index{PIXEL\_PER\_SQUARE@{PIXEL\_PER\_SQUARE}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{PIXEL\_PER\_SQUARE}{PIXEL\_PER\_SQUARE}}
+{\footnotesize\ttfamily final int Vue\+Controleur\+Menu.\+PIXEL\+\_\+\+PER\+\_\+\+SQUARE = 60\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_vue_controleur_menu_a80314c7e71f912828dfc15502d97e86a}\label{class_vue_controleur_menu_a80314c7e71f912828dfc15502d97e86a}} 
+\index{VueControleurMenu@{VueControleurMenu}!SIZE\_WINDOWS@{SIZE\_WINDOWS}}
+\index{SIZE\_WINDOWS@{SIZE\_WINDOWS}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{SIZE\_WINDOWS}{SIZE\_WINDOWS}}
+{\footnotesize\ttfamily final int Vue\+Controleur\+Menu.\+SIZE\+\_\+\+WINDOWS = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_vue_controleur_menu_a3e513f1b9b6e0e329419edd21678bf71}\label{class_vue_controleur_menu_a3e513f1b9b6e0e329419edd21678bf71}} 
+\index{VueControleurMenu@{VueControleurMenu}!user@{user}}
+\index{user@{user}!VueControleurMenu@{VueControleurMenu}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user}{User}} Vue\+Controleur\+Menu.\+user\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Evan/\+Desktop/\+Flow\+Game/src/\mbox{\hyperlink{_vue_controleur_menu_8java}{Vue\+Controleur\+Menu.\+java}}\end{DoxyCompactItemize}

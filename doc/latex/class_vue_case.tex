@@ -1,0 +1,421 @@
+\hypertarget{class_vue_case}{}\doxysection{Référence de la classe Vue\+Case}
+\label{class_vue_case}\index{VueCase@{VueCase}}
+Graphe d\textquotesingle{}héritage de Vue\+Case\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vue_case}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vue_case_ac316909b00dc8c7230beb4b28a1ab4ae}{Vue\+Case}} (int x, int y, \mbox{\hyperlink{enum_case_type}{Case\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructeur de la class \mbox{\hyperlink{class_vue_case}{Vue\+Case}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_case_a12a78529d9bc84db102ff9e39b5d9bc2}{update}} ()
+\begin{DoxyCompactList}\small\item\em Actualise les elements graphiques. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_case}{Model\+Case}} \mbox{\hyperlink{class_vue_case_ad9188e7b4245f7477bb5fa815df00429}{get\+Case}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut \char`\"{}c\char`\"{}. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_vue_case_a9bb07701ec1ddc49f5280d59672368e7}{get\+Color}} ()
+\begin{DoxyCompactList}\small\item\em Retourne une couleur en fonction du type de starter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_case_a985ffd2398b437616c3907fe465e259b}{paint\+Component}} (Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}essemble des composants. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_case_a9bef300f97d6743fd176eea2b2e61d12}{set\+Starter}} (\mbox{\hyperlink{class_vue_case}{Vue\+Case}} \mbox{\hyperlink{class_vue_case_a785b39333d99f3b26cdbcd33cadf6a30}{starter}})
+\begin{DoxyCompactList}\small\item\em Mutateur de l\textquotesingle{}attribut starter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_case_aee41a18286cffbb5a57e5d906a439ec2}{send\+Cross\+To\+Draw}} (\mbox{\hyperlink{class_chemin}{Chemin}} chemin)
+\begin{DoxyCompactList}\small\item\em Dessine un croisement en fonction des deux chemins. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_case_type}{Case\+Type}} \mbox{\hyperlink{class_vue_case_a8d81b38a289eff725cc7477705568eb9}{get\+First\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut firsttype. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_case_type}{Case\+Type}} \mbox{\hyperlink{class_vue_case_a948a3cf1591bda4ad7344e4f25cc6131}{get\+Last\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut lasttype. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vue_case}{Vue\+Case}} \mbox{\hyperlink{class_vue_case_a3ec39a8b55a6475fab9a81fcfe2e5099}{get\+Other\+Starter}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut otherstarter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vue_case_a1b052511eddd5a04e934630180163305}{draw\+Noon}} (Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine une part de chemin (Nord) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_case_a67c4e76eb6c9734016324e96d7c1c151}{draw\+Nine}} (Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine une part de chemin (Ouest) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_case_ae65145ab3bcf7d37153288484ab34460}{draw\+Six}} (Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine une part de chemin (Sud) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vue_case_ac2e4e321f069979060b592d0283a8665}{draw\+Three}} (Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine une part de chemin (Est) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+final \mbox{\hyperlink{class_model_case}{Model\+Case}} \mbox{\hyperlink{class_vue_case_aef67717f1e26d4187c4264351fe85a40}{c}}
+\item 
+\mbox{\hyperlink{class_vue_case}{Vue\+Case}} \mbox{\hyperlink{class_vue_case_a785b39333d99f3b26cdbcd33cadf6a30}{starter}} = null
+\item 
+\mbox{\hyperlink{class_vue_case}{Vue\+Case}} \mbox{\hyperlink{class_vue_case_aef071543c3d064df34fff6d9f335147f}{otherstarter}} = null
+\item 
+\mbox{\hyperlink{enum_case_type}{Case\+Type}} \mbox{\hyperlink{class_vue_case_ac28d099481e29acee13b95da9b1ccf43}{firsttype}} = null
+\item 
+\mbox{\hyperlink{enum_case_type}{Case\+Type}} \mbox{\hyperlink{class_vue_case_a538ccf84e20abd2735d78091bba931be}{lasttype}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_vue_case_ac316909b00dc8c7230beb4b28a1ab4ae}\label{class_vue_case_ac316909b00dc8c7230beb4b28a1ab4ae}} 
+\index{VueCase@{VueCase}!VueCase@{VueCase}}
+\index{VueCase@{VueCase}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{VueCase()}{VueCase()}}
+{\footnotesize\ttfamily Vue\+Case.\+Vue\+Case (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{enum_case_type}{Case\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la class \mbox{\hyperlink{class_vue_case}{Vue\+Case}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Frédéric ARMETTA \& Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne à l\textquotesingle{}attribut \char`\"{}c\char`\"{} une instanciation de la classe \mbox{\hyperlink{class_model_case}{Model\+Case}} avec en paramètre les paramètres donnés au constructeur 
+\end{DoxyItemize}
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_vue_case_a67c4e76eb6c9734016324e96d7c1c151}\label{class_vue_case_a67c4e76eb6c9734016324e96d7c1c151}} 
+\index{VueCase@{VueCase}!drawNine@{drawNine}}
+\index{drawNine@{drawNine}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{drawNine()}{drawNine()}}
+{\footnotesize\ttfamily void Vue\+Case.\+draw\+Nine (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dessine une part de chemin (Ouest) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \mbox{[}Graphics\mbox{]} Composante graphique du JFrame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Frédéric ARMETTA \& Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne la couleur en fonction de la couleur du starter
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item (Le code en commentaire est une alternative d\textquotesingle{}affichage) 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_a1b052511eddd5a04e934630180163305}\label{class_vue_case_a1b052511eddd5a04e934630180163305}} 
+\index{VueCase@{VueCase}!drawNoon@{drawNoon}}
+\index{drawNoon@{drawNoon}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{drawNoon()}{drawNoon()}}
+{\footnotesize\ttfamily void Vue\+Case.\+draw\+Noon (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dessine une part de chemin (Nord) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \mbox{[}Graphics\mbox{]} Composante graphique du JFrame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Frédéric ARMETTA \& Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne la couleur en fonction de la couleur du starter
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item (Le code en commentaire est une alternative d\textquotesingle{}affichage) 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_ae65145ab3bcf7d37153288484ab34460}\label{class_vue_case_ae65145ab3bcf7d37153288484ab34460}} 
+\index{VueCase@{VueCase}!drawSix@{drawSix}}
+\index{drawSix@{drawSix}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{drawSix()}{drawSix()}}
+{\footnotesize\ttfamily void Vue\+Case.\+draw\+Six (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dessine une part de chemin (Sud) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \mbox{[}Graphics\mbox{]} Composante graphique du JFrame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Frédéric ARMETTA \& Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne la couleur en fonction de la couleur du starter
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item (Le code en commentaire est une alternative d\textquotesingle{}affichage) 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_ac2e4e321f069979060b592d0283a8665}\label{class_vue_case_ac2e4e321f069979060b592d0283a8665}} 
+\index{VueCase@{VueCase}!drawThree@{drawThree}}
+\index{drawThree@{drawThree}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{drawThree()}{drawThree()}}
+{\footnotesize\ttfamily void Vue\+Case.\+draw\+Three (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dessine une part de chemin (Est) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \mbox{[}Graphics\mbox{]} Composante graphique du JFrame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Frédéric ARMETTA \& Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne la couleur en fonction de la couleur du starter
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item (Le code en commentaire est une alternative d\textquotesingle{}affichage) 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_ad9188e7b4245f7477bb5fa815df00429}\label{class_vue_case_ad9188e7b4245f7477bb5fa815df00429}} 
+\index{VueCase@{VueCase}!getCase@{getCase}}
+\index{getCase@{getCase}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{getCase()}{getCase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_case}{Model\+Case}} Vue\+Case.\+get\+Case (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut \char`\"{}c\char`\"{}. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+c\+: \mbox{[}\mbox{\hyperlink{class_vue_case}{Vue\+Case}}\mbox{]} Retourne l\textquotesingle{}attribut \char`\"{}c\char`\"{} 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne la valeur de l\textquotesingle{}attribut \char`\"{}c\char`\"{} 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_a9bb07701ec1ddc49f5280d59672368e7}\label{class_vue_case_a9bb07701ec1ddc49f5280d59672368e7}} 
+\index{VueCase@{VueCase}!getColor@{getColor}}
+\index{getColor@{getColor}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily Color Vue\+Case.\+get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne une couleur en fonction du type de starter. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{[}Color\mbox{]} Retourne une couleur 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On regarde avec un switch case le type de starter et on retourne la couleur correspondante 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_a8d81b38a289eff725cc7477705568eb9}\label{class_vue_case_a8d81b38a289eff725cc7477705568eb9}} 
+\index{VueCase@{VueCase}!getFirstType@{getFirstType}}
+\index{getFirstType@{getFirstType}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{getFirstType()}{getFirstType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_case_type}{Case\+Type}} Vue\+Case.\+get\+First\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut firsttype. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+firsttype\+: \mbox{[}\mbox{\hyperlink{class_vue_case}{Vue\+Case}}\mbox{]} Retourne l\textquotesingle{}attribut firsttype 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne la valeur de l\textquotesingle{}attribut firsttype 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_a948a3cf1591bda4ad7344e4f25cc6131}\label{class_vue_case_a948a3cf1591bda4ad7344e4f25cc6131}} 
+\index{VueCase@{VueCase}!getLastType@{getLastType}}
+\index{getLastType@{getLastType}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{getLastType()}{getLastType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_case_type}{Case\+Type}} Vue\+Case.\+get\+Last\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut lasttype. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+lasttype\+: \mbox{[}\mbox{\hyperlink{class_vue_case}{Vue\+Case}}\mbox{]} Retourne l\textquotesingle{}attribut lasttype 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne la valeur de l\textquotesingle{}attribut lasttype 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_a3ec39a8b55a6475fab9a81fcfe2e5099}\label{class_vue_case_a3ec39a8b55a6475fab9a81fcfe2e5099}} 
+\index{VueCase@{VueCase}!getOtherStarter@{getOtherStarter}}
+\index{getOtherStarter@{getOtherStarter}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{getOtherStarter()}{getOtherStarter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vue_case}{Vue\+Case}} Vue\+Case.\+get\+Other\+Starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut otherstarter. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+otherstarter\+: \mbox{[}\mbox{\hyperlink{class_vue_case}{Vue\+Case}}\mbox{]} Retourne l\textquotesingle{}attribut otherstarter 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne la valeur de l\textquotesingle{}attribut otherstarter 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_a985ffd2398b437616c3907fe465e259b}\label{class_vue_case_a985ffd2398b437616c3907fe465e259b}} 
+\index{VueCase@{VueCase}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily void Vue\+Case.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})}
+
+
+
+Dessine l\textquotesingle{}essemble des composants. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & \mbox{[}Graphics\mbox{]} Composante graphique du JFrame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Frédéric ARMETTA \& Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item Dessine un rectangle vide
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item En fonction du type de la case, on dessine soit un rond de couleur, soit un chemin ou un croisement
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item (Le code en commentaire est une alternative d\textquotesingle{}affichage) \begin{DoxySeeAlso}{Voir également}
+\char`\"{}https\+://docs.\+oracle.\+com/javase/7/docs/api/javax/swing/\+JComponent.\+html\char`\"{} 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_aee41a18286cffbb5a57e5d906a439ec2}\label{class_vue_case_aee41a18286cffbb5a57e5d906a439ec2}} 
+\index{VueCase@{VueCase}!sendCrossToDraw@{sendCrossToDraw}}
+\index{sendCrossToDraw@{sendCrossToDraw}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{sendCrossToDraw()}{sendCrossToDraw()}}
+{\footnotesize\ttfamily void Vue\+Case.\+send\+Cross\+To\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chemin}{Chemin}}}]{chemin }\end{DoxyParamCaption})}
+
+
+
+Dessine un croisement en fonction des deux chemins. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chemin} & \mbox{[}\mbox{\hyperlink{class_chemin}{Chemin}}\mbox{]} \mbox{\hyperlink{class_chemin}{Chemin}} envoyé pour le croisement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne le starter du deuxième chemin à l\textquotesingle{}attribut otherstarter
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On assigne l\textquotesingle{}attribut firsttype au type actuel et lasttype à la direction inverse
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On assigne le nouveau type croisement à l\textquotesingle{}attribut \char`\"{}c\char`\"{}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On redessine la case 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_a9bef300f97d6743fd176eea2b2e61d12}\label{class_vue_case_a9bef300f97d6743fd176eea2b2e61d12}} 
+\index{VueCase@{VueCase}!setStarter@{setStarter}}
+\index{setStarter@{setStarter}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{setStarter()}{setStarter()}}
+{\footnotesize\ttfamily void Vue\+Case.\+set\+Starter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vue_case}{Vue\+Case}}}]{starter }\end{DoxyParamCaption})}
+
+
+
+Mutateur de l\textquotesingle{}attribut starter. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em starter} & \mbox{[}\mbox{\hyperlink{class_vue_case}{Vue\+Case}}\mbox{]} Objet \mbox{\hyperlink{class_vue_case}{Vue\+Case}} à assigner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne à l\textquotesingle{}attribut la valeur de l\textquotesingle{}objet \mbox{\hyperlink{class_vue_case}{Vue\+Case}} en paramètre 
+\end{DoxyItemize}\mbox{\Hypertarget{class_vue_case_a12a78529d9bc84db102ff9e39b5d9bc2}\label{class_vue_case_a12a78529d9bc84db102ff9e39b5d9bc2}} 
+\index{VueCase@{VueCase}!update@{update}}
+\index{update@{update}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Vue\+Case.\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualise les elements graphiques. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On rejoue la méthode paint\+Component pour actualiser les differents elements 
+\end{DoxyItemize}
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_vue_case_aef67717f1e26d4187c4264351fe85a40}\label{class_vue_case_aef67717f1e26d4187c4264351fe85a40}} 
+\index{VueCase@{VueCase}!c@{c}}
+\index{c@{c}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{class_model_case}{Model\+Case}} Vue\+Case.\+c\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_vue_case_ac28d099481e29acee13b95da9b1ccf43}\label{class_vue_case_ac28d099481e29acee13b95da9b1ccf43}} 
+\index{VueCase@{VueCase}!firsttype@{firsttype}}
+\index{firsttype@{firsttype}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{firsttype}{firsttype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_case_type}{Case\+Type}} Vue\+Case.\+firsttype = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_vue_case_a538ccf84e20abd2735d78091bba931be}\label{class_vue_case_a538ccf84e20abd2735d78091bba931be}} 
+\index{VueCase@{VueCase}!lasttype@{lasttype}}
+\index{lasttype@{lasttype}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{lasttype}{lasttype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_case_type}{Case\+Type}} Vue\+Case.\+lasttype = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_vue_case_aef071543c3d064df34fff6d9f335147f}\label{class_vue_case_aef071543c3d064df34fff6d9f335147f}} 
+\index{VueCase@{VueCase}!otherstarter@{otherstarter}}
+\index{otherstarter@{otherstarter}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{otherstarter}{otherstarter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vue_case}{Vue\+Case}} Vue\+Case.\+otherstarter = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_vue_case_a785b39333d99f3b26cdbcd33cadf6a30}\label{class_vue_case_a785b39333d99f3b26cdbcd33cadf6a30}} 
+\index{VueCase@{VueCase}!starter@{starter}}
+\index{starter@{starter}!VueCase@{VueCase}}
+\doxysubsubsection{\texorpdfstring{starter}{starter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vue_case}{Vue\+Case}} Vue\+Case.\+starter = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Evan/\+Desktop/\+Flow\+Game/src/\mbox{\hyperlink{_vue_case_8java}{Vue\+Case.\+java}}\end{DoxyCompactItemize}
