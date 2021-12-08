@@ -42,7 +42,7 @@ public class VueControleurMenu extends JFrame {
      * @brief Mutateur de l'attribut user
      * @details On donne à l'attribut user la valeur de l'User passé en paramètre
      */
-    public void setUsername(User user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
@@ -413,7 +413,7 @@ public class VueControleurMenu extends JFrame {
             //On oblige l'utilisateur à entrer des caractères
             if (!userstr.equals("")) {
                 //On récupère l'utilisateur par son nom dans le fichier des utilisateurs
-                setUsername(files.getUserByUsername(userstr));
+                setUser(files.getUserByUsername(userstr));
                 menuPane.removeAll();
 
                 //On affiche le menu principal

@@ -192,7 +192,6 @@ public class VueCase extends JPanel {
                     drawSix(g);
                     break;
                 case cross:
-
                     if (this.otherstarter != null) {
                         VueCase firststarter = this.starter;
                         VueCase laststarter = this.otherstarter;

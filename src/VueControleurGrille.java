@@ -224,7 +224,7 @@ public class VueControleurGrille extends JFrame {
 
         back.addActionListener(e -> {
             VueControleurMenu menu = new VueControleurMenu();
-            menu.setUsername(user);
+            menu.setUser(user);
             menu.drawMainMenu();
             setVisible(false);
             dispose();

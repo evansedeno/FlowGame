@@ -7,8 +7,8 @@
  */
 public class User implements Comparable<User> {
 
-    private int id;
-    private String username;
+    private final int id;
+    private final String username;
     private int points;
 
     /**
@@ -36,17 +36,6 @@ public class User implements Comparable<User> {
     }
 
     /**
-     * @author Evan SEDENO
-     * @brief Constructeur de la class VueControleurMenu
-     * @details - On définit certains paramètres sur le JFrame (fermeture de la fenêtre, taille de la fenêtre et pas redimensionnable)
-     * - On appelle la méthode drawUsernameMenu()
-     * - On rend le JFrame visible
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    /**
      * @return this.username: [String] Nom de l'utilisateur
      * @author Evan SEDENO
      * @brief Accesseur de l'attribut username
@@ -57,16 +46,6 @@ public class User implements Comparable<User> {
     }
 
     /**
-     * @param username: [String] Nom de l'utilisateur
-     * @author Evan SEDENO
-     * @brief Mutateur de l'attribut username
-     * @details - On donne pour valeur à l'attribut username le paramètre username
-     */
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    /**
      * @param points: [int] Nombre de points à ajouter à l'utilisateur
      * @author Evan SEDENO
      * @brief Ajoute un certains nombres de points à l'utilisateur
@@ -74,16 +53,6 @@ public class User implements Comparable<User> {
      */
     public void addPoints(int points) {
         this.points = this.points + points;
-    }
-
-    /**
-     * @param points: [int] Points de l'utilisateur
-     * @author Evan SEDENO
-     * @brief Mutateur de l'attribut points
-     * @details - On donne pour valeur à l'attribut points le paramètre points
-     */
-    public void setPoints(int points) {
-        this.points = points;
     }
 
     /**
