@@ -1,0 +1,5 @@
+empty empty empty S2 S1 
+empty S4 S3 S1 empty 
+empty empty empty empty empty 
+empty empty empty empty S3 
+empty empty S2 empty S4 
