@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.awt.event.*;
 import java.util.List;
 
+/**
+ * @author Frédéric ARMETTA & Evan SEDENO
+ * @version 2.0
+ * @date 16/11/2021
+ * @file VueCase.java
+ * @brief Class Vue et Controleur pour les grilles
+ * @details Contient toutes les méthodes et attributs pour la gestion et l'affichage d'une grille
+ */
 public class VueControleurGrille extends JFrame {
 
     private static final int PIXEL_PER_SQUARE = 60;
@@ -19,6 +27,20 @@ public class VueControleurGrille extends JFrame {
     private boolean clicked = false;
     private final boolean iscreation;
 
+    /**
+     * @param size:   [int] Taille du niveau
+     * @param _level: [int] Identifiant du niveau
+     * @param user:   [User] Utilisateur
+     * @author Frédéric ARMETTA & Evan SEDENO
+     * @brief Constructeur de la class VueControleurGrille
+     * @details - On assigne la valeur des attributs size, _level et user avec les 3 paramètres
+     * - On définit certains paramètres sur le JFrame (fermeture de la fenêtre, taille de la fenêtre et pas redimensionnable)
+     * - On assigne aux 3 attributs JPanel une instanciation de JPanel
+     * - On assigne à l'attribut grille une nouvelle grille
+     * - On vérifie si l'on souhaite jouer ou créer un niveau et on appelle les méthodes requises
+     * - On ajoute la grille à la vue et on ajoute les listeners
+     * - On ajoute tous les panels à la vue
+     */
     public VueControleurGrille(int size, int _level, User user) {
 
         this.level = _level;
@@ -47,16 +69,32 @@ public class VueControleurGrille extends JFrame {
             grille.generateGrille();
         }
 
-        //On ajoute la grille au pannel
+        //On ajoute la grille au panel
         this.addGrilleOnVue();
         this.addGrilleListeners();
 
-        //On ajoute les pannels à la vue
+        //On ajoute les panels à la vue
         this.addPaneOnVue();
         this.allPane.setLayout(new BoxLayout(this.allPane, BoxLayout.Y_AXIS));
         setContentPane(this.allPane);
+        setVisible(true);
     }
 
+    /**
+     * @param level: [int] Identifiant du niveau
+     * @author Evan SEDENO
+     * @brief Mutateur de l'attribut _level
+     * @details - On assigne la valeur du paramètre level à l'attribut _level
+     */
+    public void setNewLevel(int level) {
+        this.level = level;
+    }
+
+    /**
+     * @author Evan SEDENO
+     * @brief Ajoute au JPanel principal les JPanel nécessaires
+     * @details - On ajoute les JPanel nécessaire à la création ou au jeu dans le JPanel principal
+     */
     public void addPaneOnVue() {
         //On ajoute les élements à la vue en fonction de si l'on créer ou on joue un niveau
         if (this.iscreation) {
@@ -67,6 +105,11 @@ public class VueControleurGrille extends JFrame {
         }
     }
 
+    /**
+     * @author Evan SEDENO
+     * @brief Ajoute à la vue chaque case de la grille
+     * @details - On parcourt l'ensemble de la grille et on ajoute chaque VueCase à la vue
+     */
     public void addGrilleOnVue() {
         //On ajoute chaque case à la vue de la grille
         for (int i = 0; i < grille.getSize(); i++) {
@@ -76,6 +119,11 @@ public class VueControleurGrille extends JFrame {
         }
     }
 
+    /**
+     * @author Frédéric ARMETTA & Evan SEDENO
+     * @brief Ajoute sur chaque case les 4 listeners (Pressé, Cliqué, Entré et Relâché)
+     * @details - On parcourt chaque case de la grille et on ajoute les 4 listeners avec la méthode appropriée
+     */
     public void addGrilleListeners() {
         //Pour chaque case de la grille on ajoute les listeners
         for (int i = 0; i < grille.getSize(); i++) {
@@ -94,7 +142,6 @@ public class VueControleurGrille extends JFrame {
                     @Override
                     public void mouseEntered(MouseEvent e) {
                         currentComponent = (JComponent) e.getSource();
-                        System.out.println(((VueCase) currentComponent).getCase().getType());
                         mouseEnteredListener((VueCase) currentComponent);
                     }
 
@@ -107,24 +154,30 @@ public class VueControleurGrille extends JFrame {
         }
     }
 
+    /**
+     * @author Evan SEDENO
+     * @brief Dessine les cases du dernier chemin
+     * @details - On appelle la méthode assignType sur le dernier chemin
+     * - On redessine les cases
+     */
     public void drawCases() {
         //On réassigne chaque case
         ways.get(ways.size() - 1).assignType(this.ways);
         repaint();
     }
 
-    public void deleteChemin(Chemin chemin) {
-        //On supprime chaque case du chemin
-        chemin.deleteChemin(this.ways);
-        //On supprime le chemin de la liste des chemins
-        this.ways.remove(chemin);
-        //On re-actualise la grille
-        repaint();
-    }
-
+    /**
+     * @author Evan SEDENO
+     * @brief Affiche l'écran de fin du jeu
+     * @details - On créer un nouveau JPanel pour l'affichage de l'écran de fin
+     * - On créer les différents text
+     * - On Ajoute les points au joueur et on l'actualise dans le fichier "users.json"
+     * - On créer un bouton retour avec un listener qui va créer une nouvelle instance de la classe VueControleurMenu
+     * - On ferme la fenêtre de jeu si on appuie sur le bouton
+     */
     public void endGame() {
 
-        //On créer un nouveau panel en felicitant le joueur
+        //On créer un nouveau panel en félicitant le joueur
         JPanel gameEnd = new JPanel(new GridLayout(3, 1));
         gameEnd.setBackground(Color.darkGray);
         gameEnd.setPreferredSize(new Dimension(getWidth() - 100, getHeight() / 2));
@@ -184,10 +237,14 @@ public class VueControleurGrille extends JFrame {
         revalidate();
     }
 
-    public void setNewLevel(int _level) {
-        this.level = _level;
-    }
-
+    /**
+     * @author Evan SEDENO
+     * @brief Affiche l'écran de fin de la création de niveau
+     * @details - On créer un nouveau JPanel pour la fin de création de niveau
+     * - On créer les différents text
+     * - On créer un bouton retour avec un listener qui va créer une nouvelle instance de la classe VueControleurMenu
+     * - On ferme la fenêtre de jeu si on appuie sur le bouton
+     */
     public void displayCreationFinished() {
 
         //On affiche un nouveau panel en disant que le niveau a bien été enregistré
@@ -220,6 +277,12 @@ public class VueControleurGrille extends JFrame {
         revalidate();
     }
 
+    /**
+     * @author Evan SEDENO
+     * @brief Affiche le bouton de validation de la création du niveau
+     * @details - On créer un bouton valider avec un listener qui sauvegarde le niveau et qui appelle la méthode displayCreationFinished
+     * - On ajoute le bouton à la vue
+     */
     public void displayValidateButton() {
         Files file = new Files();
         JButton button = new JButton("VALIDER");
@@ -238,54 +301,59 @@ public class VueControleurGrille extends JFrame {
         this.buttonPane.setMaximumSize(new Dimension(PIXEL_PER_SQUARE * this.size, 50));
     }
 
-    public void mouseReleaseListener(VueCase mycase) {
-        if (this.ways.size() > 0 && mycase.getCase().isLocked() && this.clicked) {
-            //On vérifie si la souris est bien lâché sur une case bloquée
-            if (mycase.getCase().getType() == this.ways.get(this.ways.size() - 1).getStart().getCase().getType() && this.clicked && mycase != this.ways.get(this.ways.size() - 1).getStart()) {
-                //On vérifie si la case STOP est valide
-                this.ways.get(this.ways.size() - 1).setStop(mycase);
-                //On vérifie si toutes les cases ont été remplis
-                if (this.grille.validateGrille()) {
-                    endGame();
+    /**
+     * @param mycase: [VueCase] Case où la souris est entré
+     * @author Evan SEDENO
+     * @brief Créer le listener quand la souris est entré
+     * @details - On vérifie si on a le bouton de la souris pressé et qu'il existe au moins un chemin
+     * - On vérifie si la case est bloqué si oui on appelle la méthode pour relâcher la souris
+     * - On vérifie si la case est un tournant ou que la case est déjà enregistré dans le dernier chemin, si oui alors on appelle la méthode pour relâcher la souris
+     * - On vérifie si la case est vide ou que c'est un chemin, si non on appelle la méthode pour relâcher la souris
+     * - On vérifie si la case est apte à être dessiné, si oui on appelle la méthode pour la dessiner, si non on appelle la méthode pour relâcher la souris
+     */
+    public void mouseEnteredListener(VueCase mycase) {
+
+        if (this.clicked && this.ways.size() > 0) {
+            //On vérifie si on traverse une case bloquée autre que celle appartenant au chemin
+            if (!mycase.getCase().isLocked()) {
+                if (mycase.getCase().isTurn() || this.ways.get(this.ways.size() - 1).getWayWithoutStartAndStop().contains(mycase)) {
+                    mouseReleaseListener(mycase);
+                } else if (mycase.getCase().getType() == CaseType.empty || mycase.getCase().isWay()) {
+                    Chemin lastway = this.ways.get(this.ways.size() - 1);
+                    if ((mycase.getCase().isWay()
+                            && !mycase.getCase().isSameDirection(lastway.getWay().get(lastway.getWay().size() - 1).getCase().getType()))
+                            || mycase.getCase().getType() == CaseType.empty
+                            && this.ways.get(this.ways.size() - 1).checkGoodChemin()) {
+                        //On ajoute la case au chemin
+                        this.ways.get(this.ways.size() - 1).addCase(mycase);
+                        //On ajoute à la case actuelle, la case du début du chemin
+                        mycase.setStarter(this.ways.get(this.ways.size() - 1).getStart());
+                        //On redessine les cases
+                        drawCases();
+                    } else {
+                        mouseReleaseListener(mycase);
+                    }
+                } else {
+                    mouseReleaseListener(mycase);
                 }
             } else {
-                deleteChemin(this.ways.get(this.ways.size() - 1));
-            }
-        } else if (this.ways.size() > 0 && !mycase.getCase().isLocked() && this.clicked) {
-            deleteChemin(this.ways.get(this.ways.size() - 1));
-        }
-        this.clicked = false;
-        //On vérifie que le dernier chemin est valide
-        if (this.ways.size() > 0) {
-            if (!this.ways.get(this.ways.size() - 1).checkGoodChemin()) {
-                this.ways.get(this.ways.size() - 1).deleteChemin(this.ways);
-                this.ways.remove(this.ways.get(this.ways.size() - 1));
-            }
-            if (this.ways.size() > 0) drawCases();
-        }
-    }
-
-    public void mouseClickedListener(VueCase mycase) {
-        //On vérifie si on clique sur un chemin
-        if (mycase.getCase().isWay()) {
-            ArrayList<Chemin> listchemin = new ArrayList<>();
-            // On ajoute le chemin qui contient la case cliqué à la liste des chemins
-            for (int i = 0; i < this.ways.size(); ++i) {
-                if (this.ways.get(i).getWay().contains(mycase)) {
-                    listchemin.add(this.ways.get(i));
-                }
-            }
-            // On supprime chaque chemin qui contient la case cliqué
-            for (Chemin way : listchemin) {
-                deleteChemin(way);
+                mouseReleaseListener(mycase);
             }
         }
     }
 
+    /**
+     * @param mycase: [VueCase] Case où la souris est appuyé
+     * @author Evan SEDENO
+     * @brief Créer le listener quand la souris est appuyé
+     * @details - On vérifie si on créer ou on joue
+     * - Si c'est une creation alors on appelle la méthode setNextNumber sur la case
+     * - Si c'est un jeu alors on vérifie si la case est bloqué, si oui on créer un nouveau chemin
+     */
     public void mousePressedListener(VueCase mycase) {
         //On vérifie si on créer la grille ou si on joue
         if (this.iscreation) {
-            //On choisi la prochaine case à placer
+            //On choisit la prochaine case à placer
             mycase.getCase().setNextNumber();
             mycase.update();
         } else {
@@ -311,36 +379,67 @@ public class VueControleurGrille extends JFrame {
         }
     }
 
-    public void mouseEnteredListener(VueCase mycase) {
-
-        if (this.clicked && this.ways.size() > 0) {
-            //On vérifie si on traverse une case bloquée autre que celle appartenant au chemin
-            if (!mycase.getCase().isLocked()) {
-                if (mycase.getCase().isTurn() || this.ways.get(this.ways.size() - 1).getWayWithoutStartAndStop().contains(mycase)) {
-                    mouseReleaseListener(mycase);
-                } else if (mycase.getCase().getType() == CaseType.empty || mycase.getCase().isWay()) {
-                    Chemin lastway = this.ways.get(this.ways.size() - 1);
-                    if ((mycase.getCase().isWay()
-                            && !mycase.getCase().isSameDirection(lastway.getWay().get(lastway.getWay().size() - 1).getCase().getType()))
-                            || mycase.getCase().getType() == CaseType.empty
-                        && this.ways.get(this.ways.size() - 1).checkGoodChemin()) {
-                        //On ajoute la case au chemin
-                        this.ways.get(this.ways.size() - 1).addCase(mycase);
-                        //On ajoute à la case actuelle, la case du début du chemin
-                        mycase.setStarter(this.ways.get(this.ways.size() - 1).getStart());
-                        //On redessine les cases
-                        drawCases();
-                    } else {
-                        mouseReleaseListener(mycase);
-                    }
-                } else {
-                    mouseReleaseListener(mycase);
+    /**
+     * @param mycase: [VueCase] Case où la souris est relâché
+     * @author Evan SEDENO
+     * @brief Créer le listener quand la souris est relâché
+     * @details - On vérifie s'il y a au moins un chemin, si la case est bloquée et que la souris est pressé
+     * - On vérifie le type de la case, si c'est le même type que la case départ du chemin alors on termine le chemin, sinon on supprime le chemin
+     * - On vérifie si l'on a fini le niveau
+     * - On vérifie que le dernier niveau est valide
+     */
+    public void mouseReleaseListener(VueCase mycase) {
+        if (this.ways.size() > 0 && mycase.getCase().isLocked() && this.clicked) {
+            //On vérifie si la souris est bien lâché sur une case bloquée
+            if (mycase.getCase().getType() == this.ways.get(this.ways.size() - 1).getStart().getCase().getType() && this.clicked && mycase != this.ways.get(this.ways.size() - 1).getStart()) {
+                //On vérifie si la case STOP est valide
+                this.ways.get(this.ways.size() - 1).setStop(mycase);
+                //On vérifie si toutes les cases ont été remplis
+                if (this.grille.validateGrille()) {
+                    endGame();
                 }
             } else {
-                mouseReleaseListener(mycase);
+                this.ways.get(this.ways.size() - 1).deleteChemin(this.ways);
+                this.ways.remove(this.ways.get(this.ways.size() - 1));
             }
+        } else if (this.ways.size() > 0 && !mycase.getCase().isLocked() && this.clicked) {
+            this.ways.get(this.ways.size() - 1).deleteChemin(this.ways);
+            this.ways.remove(this.ways.get(this.ways.size() - 1));
         }
+        this.clicked = false;
+        //On vérifie que le dernier chemin est valide
+        if (this.ways.size() > 0) {
+            if (!this.ways.get(this.ways.size() - 1).checkGoodChemin()) {
+                this.ways.get(this.ways.size() - 1).deleteChemin(this.ways);
+                this.ways.remove(this.ways.get(this.ways.size() - 1));
+            }
+            if (this.ways.size() > 0) drawCases();
+        }
+        repaint();
     }
 
-
+    /**
+     * @param mycase: [VueCase] Case où la souris est cliqué
+     * @author Evan SEDENO
+     * @brief Créer le listener quand la souris est cliqué
+     * @details - On vérifie si la case cliqué est un chemin, si oui on supprime ce chemin
+     */
+    public void mouseClickedListener(VueCase mycase) {
+        //On vérifie si on clique sur un chemin
+        if (mycase.getCase().isWay()) {
+            ArrayList<Chemin> listchemin = new ArrayList<>();
+            // On ajoute le chemin qui contient la case cliqué à la liste des chemins
+            for (int i = 0; i < this.ways.size(); ++i) {
+                if (this.ways.get(i).getWay().contains(mycase)) {
+                    listchemin.add(this.ways.get(i));
+                }
+            }
+            // On supprime chaque chemin qui contient la case cliqué
+            for (Chemin way : listchemin) {
+                way.deleteChemin(this.ways);
+                this.ways.remove(way);
+            }
+        }
+        repaint();
+    }
 }

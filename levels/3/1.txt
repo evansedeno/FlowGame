@@ -1,3 +1,0 @@
-empty S1 empty 
-empty empty S1 
-S3 empty S3 

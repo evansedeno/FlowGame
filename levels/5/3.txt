@@ -1,5 +1,0 @@
-empty empty S4 empty empty 
-S3 S1 empty empty S2 
-empty empty empty empty empty 
-empty empty S4 empty empty 
-S3 S1 empty empty S2 
