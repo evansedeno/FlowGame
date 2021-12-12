@@ -1,0 +1,420 @@
+\hypertarget{classmodel_1_1_model_grille}{}\doxysection{Référence de la classe model.\+Model\+Grille}
+\label{classmodel_1_1_model_grille}\index{model.ModelGrille@{model.ModelGrille}}
+Graphe d\textquotesingle{}héritage de model.\+Model\+Grille\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmodel_1_1_model_grille}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1_model_grille_a83aee9331b1d7cec1fa4e627c61886f6}{Model\+Grille}} (int size, int level, \mbox{\hyperlink{classmodel_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Constructeur de la class \mbox{\hyperlink{classmodel_1_1_model_grille}{model.\+Model\+Grille}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_model_grille_a6ed10dfa45834f0145a9ee1cee0c8bb9}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}} \mbox{\hyperlink{classmodel_1_1_model_grille_a3ecfdb8108b3a7f70e72de4fde849c7d}{get\+Vue\+Case}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Accesseur spécial de l\textquotesingle{}attribut tab\+CV en fonction d\textquotesingle{}une position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_grille_a397ec193d8656e4b8650abb0cc9efe7b}{set\+New\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Mutateur special de l\textquotesingle{}attribut level. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmodel_1_1_model_grille_a723dde84739e7853e66a5d784b582d74}{is\+Creation}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut iscreation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmodel_1_1_user}{User}} \mbox{\hyperlink{classmodel_1_1_model_grille_a22790d923e5e3b7f97f07ddce3334604}{get\+User}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_model_grille_a28674e3ea813b5790b92ebb8449f40ed}{get\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_grille_ac97c74aff56767d8f449887b7b205b36}{generate\+New\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Genre un nouveau niveau par rapport à la grille. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_grille_a064f71e25c0d82bd99461e6fd7dc0c4a}{generate\+Existing\+Grille}} ()
+\begin{DoxyCompactList}\small\item\em Remplis la grille en fonction du niveau demandé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_grille_a422cb1f7ac8c2d01bba7d5c0a3cb7db8}{generate\+Empty\+Grille}} ()
+\begin{DoxyCompactList}\small\item\em Remplis la grille de cases vide. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmodel_1_1_model_grille_a6b7f4de71f812c20a11b465470e7c828}{is\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em Vérifie s\textquotesingle{}il reste des cases vides et que les chemins sont complets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_grille_ac76ab230fb65e08eafa92bdba74734b7}{pressed\+Event}} (\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}} mycase)
+\begin{DoxyCompactList}\small\item\em Créer le listener quand la souris est appuyé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_grille_ac98a1d35eb603747d0631c094e4ae7d4}{clicked\+Event}} (\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}} mycase)
+\begin{DoxyCompactList}\small\item\em Effectue les vérifications pour supprimer un chemin ou changer de type de case lors d\textquotesingle{}une création. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_grille_accf3edc5048cb06132d40cfc551f44d0}{entered\+Event}} (\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}} mycase)
+\begin{DoxyCompactList}\small\item\em Créer le listener quand la souris est entré \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_grille_a33df7e57ed62cec353da13e644082099}{released\+Event}} (\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}} mycase)
+\begin{DoxyCompactList}\small\item\em Créer le listener quand la souris est relâché \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classmodel_1_1_model_grille_a83aee9331b1d7cec1fa4e627c61886f6}\label{classmodel_1_1_model_grille_a83aee9331b1d7cec1fa4e627c61886f6}} 
+\index{model.ModelGrille@{model.ModelGrille}!ModelGrille@{ModelGrille}}
+\index{ModelGrille@{ModelGrille}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{ModelGrille()}{ModelGrille()}}
+{\footnotesize\ttfamily model.\+Model\+Grille.\+Model\+Grille (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{level,  }\item[{\mbox{\hyperlink{classmodel_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la class \mbox{\hyperlink{classmodel_1_1_model_grille}{model.\+Model\+Grille}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em size} & \mbox{[}int\mbox{]} Taille du niveau \\
+\hline
+{\em level} & \mbox{[}int\mbox{]} Identifiant du niveau \\
+\hline
+{\em user} & \mbox{[}\mbox{\hyperlink{classmodel_1_1_user}{model.\+User}}\mbox{]} Utilisateur du niveau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne la valeur de chaque paramètre à chaque attribut
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On instancie une nouvelle matrice de \mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}} avec comme taille la taille passée en paramètre 
+\end{DoxyItemize}
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classmodel_1_1_model_grille_ac98a1d35eb603747d0631c094e4ae7d4}\label{classmodel_1_1_model_grille_ac98a1d35eb603747d0631c094e4ae7d4}} 
+\index{model.ModelGrille@{model.ModelGrille}!clickedEvent@{clickedEvent}}
+\index{clickedEvent@{clickedEvent}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{clickedEvent()}{clickedEvent()}}
+{\footnotesize\ttfamily void model.\+Model\+Grille.\+clicked\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}}}]{mycase }\end{DoxyParamCaption})}
+
+
+
+Effectue les vérifications pour supprimer un chemin ou changer de type de case lors d\textquotesingle{}une création. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mycase} & \mbox{[}\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}}\mbox{]} Case où la souris est cliqué \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On vérifie la grille est une création ou non, si oui on change de type la case cliqué
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On vérifie le chemin à supprimer, s\textquotesingle{}il est supprimable alors le supprime
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On notifie l\textquotesingle{}Observer 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_accf3edc5048cb06132d40cfc551f44d0}\label{classmodel_1_1_model_grille_accf3edc5048cb06132d40cfc551f44d0}} 
+\index{model.ModelGrille@{model.ModelGrille}!enteredEvent@{enteredEvent}}
+\index{enteredEvent@{enteredEvent}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{enteredEvent()}{enteredEvent()}}
+{\footnotesize\ttfamily void model.\+Model\+Grille.\+entered\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}}}]{mycase }\end{DoxyParamCaption})}
+
+
+
+Créer le listener quand la souris est entré 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mycase} & \mbox{[}\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}}\mbox{]} Case où la souris est entré \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On vérifie si on a le bouton de la souris pressé et qu\textquotesingle{}il existe au moins un chemin
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On vérifie si la case est bloqué si oui on appelle la méthode pour relâcher la souris
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On vérifie si la case est un tournant ou que la case est déjà enregistré dans le dernier chemin, si oui alors on appelle la méthode pour relâcher la souris
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On vérifie si la case est vide ou que c\textquotesingle{}est un chemin, si non on appelle la méthode pour relâcher la souris
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On vérifie si la case est apte à être dessiné, si oui on appelle la méthode pour la dessiner, si non on appelle la méthode pour relâcher la souris
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On notifie l\textquotesingle{}Observer 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a422cb1f7ac8c2d01bba7d5c0a3cb7db8}\label{classmodel_1_1_model_grille_a422cb1f7ac8c2d01bba7d5c0a3cb7db8}} 
+\index{model.ModelGrille@{model.ModelGrille}!generateEmptyGrille@{generateEmptyGrille}}
+\index{generateEmptyGrille@{generateEmptyGrille}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{generateEmptyGrille()}{generateEmptyGrille()}}
+{\footnotesize\ttfamily void model.\+Model\+Grille.\+generate\+Empty\+Grille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remplis la grille de cases vide. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item Pour chaque case de la matrice tab\+CV, on créer un objet \mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}} avec un type vide 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a064f71e25c0d82bd99461e6fd7dc0c4a}\label{classmodel_1_1_model_grille_a064f71e25c0d82bd99461e6fd7dc0c4a}} 
+\index{model.ModelGrille@{model.ModelGrille}!generateExistingGrille@{generateExistingGrille}}
+\index{generateExistingGrille@{generateExistingGrille}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{generateExistingGrille()}{generateExistingGrille()}}
+{\footnotesize\ttfamily void model.\+Model\+Grille.\+generate\+Existing\+Grille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remplis la grille en fonction du niveau demandé 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item Pour chaque case de la matrice tab\+CV, on créer un objet \mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On récupère le type de la case grâce à la méthode get\+Type\+In\+File de la class \mbox{\hyperlink{classutilitaires_1_1_files}{utilitaires.\+Files}} et on l\textquotesingle{}assigne à l\textquotesingle{}objet \mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}} 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_ac97c74aff56767d8f449887b7b205b36}\label{classmodel_1_1_model_grille_ac97c74aff56767d8f449887b7b205b36}} 
+\index{model.ModelGrille@{model.ModelGrille}!generateNewLevel@{generateNewLevel}}
+\index{generateNewLevel@{generateNewLevel}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{generateNewLevel()}{generateNewLevel()}}
+{\footnotesize\ttfamily void model.\+Model\+Grille.\+generate\+New\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Genre un nouveau niveau par rapport à la grille. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On appelle la méthode write\+Level\+File de la class \mbox{\hyperlink{classutilitaires_1_1_files}{utilitaires.\+Files}} pour générer un fichier avec le niveau de la grille actuel 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a28674e3ea813b5790b92ebb8449f40ed}\label{classmodel_1_1_model_grille_a28674e3ea813b5790b92ebb8449f40ed}} 
+\index{model.ModelGrille@{model.ModelGrille}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily int model.\+Model\+Grille.\+get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut level. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne la valeur de l\textquotesingle{}attribut level 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a6ed10dfa45834f0145a9ee1cee0c8bb9}\label{classmodel_1_1_model_grille_a6ed10dfa45834f0145a9ee1cee0c8bb9}} 
+\index{model.ModelGrille@{model.ModelGrille}!getSize@{getSize}}
+\index{getSize@{getSize}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int model.\+Model\+Grille.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut size. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+size\+: \mbox{[}int\mbox{]} Taille du niveau 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie la valeur de la taille de la grille 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a22790d923e5e3b7f97f07ddce3334604}\label{classmodel_1_1_model_grille_a22790d923e5e3b7f97f07ddce3334604}} 
+\index{model.ModelGrille@{model.ModelGrille}!getUser@{getUser}}
+\index{getUser@{getUser}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodel_1_1_user}{User}} model.\+Model\+Grille.\+get\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut user. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne la valeur de l\textquotesingle{}attribut user 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a3ecfdb8108b3a7f70e72de4fde849c7d}\label{classmodel_1_1_model_grille_a3ecfdb8108b3a7f70e72de4fde849c7d}} 
+\index{model.ModelGrille@{model.ModelGrille}!getVueCase@{getVueCase}}
+\index{getVueCase@{getVueCase}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{getVueCase()}{getVueCase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}} model.\+Model\+Grille.\+get\+Vue\+Case (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Accesseur spécial de l\textquotesingle{}attribut tab\+CV en fonction d\textquotesingle{}une position. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+tab\+CV\mbox{[}y\mbox{]}\mbox{[}x\mbox{]}\+: \mbox{[}\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}}\mbox{]} Objet \mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}} récupéré en fonction de son emplacement x et y 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie l\textquotesingle{}objet \mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}} qui correspond à la position x et y dans la matrice tab\+CV 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a723dde84739e7853e66a5d784b582d74}\label{classmodel_1_1_model_grille_a723dde84739e7853e66a5d784b582d74}} 
+\index{model.ModelGrille@{model.ModelGrille}!isCreation@{isCreation}}
+\index{isCreation@{isCreation}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{isCreation()}{isCreation()}}
+{\footnotesize\ttfamily boolean model.\+Model\+Grille.\+is\+Creation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut iscreation. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne la valeur de l\textquotesingle{}attribut iscreation pour voir si on créer ou on joue un niveau 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a6b7f4de71f812c20a11b465470e7c828}\label{classmodel_1_1_model_grille_a6b7f4de71f812c20a11b465470e7c828}} 
+\index{model.ModelGrille@{model.ModelGrille}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{isFinished()}{isFinished()}}
+{\footnotesize\ttfamily boolean model.\+Model\+Grille.\+is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérifie s\textquotesingle{}il reste des cases vides et que les chemins sont complets. 
+
+\begin{DoxyReturn}{Renvoie}
+true/false\+: \mbox{[}boolean\mbox{]} On retourne vrai si la grille n\textquotesingle{}a plus de case vide et que tous les chemins sont complets sinon on retourne faux 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item Pour chaque case de la matrice tab\+CV, on vérifie si le type de la case est vide
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Si une case est vide on retourne faux
+\end{DoxyItemize}
+
+Pour chaque chemin, on vérifie si tous les chemins sont complets
+\begin{DoxyItemize}
+\item Si un chemin est incomplet on retourne faux sinon on retourne vrai 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_ac76ab230fb65e08eafa92bdba74734b7}\label{classmodel_1_1_model_grille_ac76ab230fb65e08eafa92bdba74734b7}} 
+\index{model.ModelGrille@{model.ModelGrille}!pressedEvent@{pressedEvent}}
+\index{pressedEvent@{pressedEvent}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{pressedEvent()}{pressedEvent()}}
+{\footnotesize\ttfamily void model.\+Model\+Grille.\+pressed\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}}}]{mycase }\end{DoxyParamCaption})}
+
+
+
+Créer le listener quand la souris est appuyé 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mycase} & \mbox{[}\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}}\mbox{]} Case où la souris est appuyé \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On vérifie si on créer ou on joue
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Si c\textquotesingle{}est une creation alors on appelle la méthode set\+Next\+Number sur la case
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Si c\textquotesingle{}est un jeu alors on vérifie si la case est bloqué, si oui on créer un nouveau chemin
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On notifie l\textquotesingle{}Observer 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a33df7e57ed62cec353da13e644082099}\label{classmodel_1_1_model_grille_a33df7e57ed62cec353da13e644082099}} 
+\index{model.ModelGrille@{model.ModelGrille}!releasedEvent@{releasedEvent}}
+\index{releasedEvent@{releasedEvent}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{releasedEvent()}{releasedEvent()}}
+{\footnotesize\ttfamily void model.\+Model\+Grille.\+released\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{Vue\+Case}}}]{mycase }\end{DoxyParamCaption})}
+
+
+
+Créer le listener quand la souris est relâché 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mycase} & \mbox{[}\mbox{\hyperlink{classvuecontroleur_1_1_vue_case}{vuecontroleur.\+Vue\+Case}}\mbox{]} Case où la souris est relâché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On vérifie s\textquotesingle{}il y a au moins un chemin, si la case est bloquée et que la souris est pressé
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On vérifie le type de la case, si c\textquotesingle{}est le même type que la case départ du chemin alors on termine le chemin, sinon on supprime le chemin
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On vérifie si l\textquotesingle{}on a fini le niveau
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On vérifie que le dernier chemin est valide
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On notifie l\textquotesingle{}Observer 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_grille_a397ec193d8656e4b8650abb0cc9efe7b}\label{classmodel_1_1_model_grille_a397ec193d8656e4b8650abb0cc9efe7b}} 
+\index{model.ModelGrille@{model.ModelGrille}!setNewLevel@{setNewLevel}}
+\index{setNewLevel@{setNewLevel}!model.ModelGrille@{model.ModelGrille}}
+\doxysubsubsection{\texorpdfstring{setNewLevel()}{setNewLevel()}}
+{\footnotesize\ttfamily void model.\+Model\+Grille.\+set\+New\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mutateur special de l\textquotesingle{}attribut level. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne à l\textquotesingle{}attribut level le prochain niveau disponible 
+\end{DoxyItemize}
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Evan/\+Desktop/\+Flow\+Game/src/model/\mbox{\hyperlink{_model_grille_8java}{Model\+Grille.\+java}}\end{DoxyCompactItemize}

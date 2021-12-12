@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['validategrille_0',['validateGrille',['../class_model_grille.html#a2211055cfc74d2c423cb95cb53d3b3b2',1,'ModelGrille']]],
-  ['vuecase_1',['VueCase',['../class_vue_case.html#ac316909b00dc8c7230beb4b28a1ab4ae',1,'VueCase']]],
-  ['vuecontroleurgrille_2',['VueControleurGrille',['../class_vue_controleur_grille.html#aaeb68810662fa444155caf3c4c563adf',1,'VueControleurGrille']]],
-  ['vuecontroleurmenu_3',['VueControleurMenu',['../class_vue_controleur_menu.html#ac913a35f5482e7028fc1ef84efb69e3f',1,'VueControleurMenu']]]
+  ['update_0',['update',['../classvuecontroleur_1_1_vue_case.html#a30b3c6facc5434b7a9cde7f6b15ff73e',1,'vuecontroleur.VueCase.update()'],['../classvuecontroleur_1_1_vue_controleur_grille.html#aa16d041048e2b6c03f2005e68a8fbb9f',1,'vuecontroleur.VueControleurGrille.update()']]],
+  ['user_1',['User',['../classmodel_1_1_user.html#a42d22dfb9fdcf122afd73e6b620b5a55',1,'model::User']]]
 ];

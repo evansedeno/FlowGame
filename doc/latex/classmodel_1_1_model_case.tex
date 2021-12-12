@@ -1,0 +1,291 @@
+\hypertarget{classmodel_1_1_model_case}{}\doxysection{Référence de la classe model.\+Model\+Case}
+\label{classmodel_1_1_model_case}\index{model.ModelCase@{model.ModelCase}}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1_model_case_acf7819411d386c126ee8d728d8942d84}{Model\+Case}} (int x, int y, \mbox{\hyperlink{enumutilitaires_1_1_case_type}{Case\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructeur de la class \mbox{\hyperlink{classmodel_1_1_model_case}{model.\+Model\+Case}}. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmodel_1_1_model_case_a3b007d5c08b7b48c3b833f260356a2bd}{is\+Locked}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut locked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_case_aa8790318bf6e631842f8d360f4c83b1f}{set\+Type}} (\mbox{\hyperlink{enumutilitaires_1_1_case_type}{Case\+Type}} ct)
+\begin{DoxyCompactList}\small\item\em Mutateur de l\textquotesingle{}attribut type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_model_case_a9e12554c2237eb261d64c989d6834734}{set\+Next\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Change le type de la case lors de la création d\textquotesingle{}un niveau. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumutilitaires_1_1_case_type}{Case\+Type}} \mbox{\hyperlink{classmodel_1_1_model_case_aa20ec17f39d60e29e49b829ef129bb3e}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut type. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmodel_1_1_model_case_a237042c9663f451a330902c9c59bb11f}{is\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em Vérifie si la case est un tournant. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmodel_1_1_model_case_a4cf7c5e417093fb37c2ea6238489fb94}{is\+Way}} ()
+\begin{DoxyCompactList}\small\item\em Vérifie si la case est un chemin. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmodel_1_1_model_case_a152d1a919909d6e55708a1bec4090a30}{is\+Same\+Direction}} (\mbox{\hyperlink{enumutilitaires_1_1_case_type}{Case\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Vérifie si le type en paramètre est dans la même direction que la case actuelle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_model_case_a1d9d345355c1d1e04b1504653654bd55}{getX}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut x. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_model_case_a74cf270e8d3b1b5dc785861d87f3c780}{getY}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut y. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classmodel_1_1_model_case_a0e38af16a31a450605bccf7c8044f693}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Retourne en chaine de caractère la position de la case. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmodel_1_1_model_case_aaa27443b220af9b25b7bc3015501868a}{equals}} (Object o)
+\begin{DoxyCompactList}\small\item\em Compare deux objets de type \mbox{\hyperlink{classmodel_1_1_model_case}{model.\+Model\+Case}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classmodel_1_1_model_case_acf7819411d386c126ee8d728d8942d84}\label{classmodel_1_1_model_case_acf7819411d386c126ee8d728d8942d84}} 
+\index{model.ModelCase@{model.ModelCase}!ModelCase@{ModelCase}}
+\index{ModelCase@{ModelCase}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{ModelCase()}{ModelCase()}}
+{\footnotesize\ttfamily model.\+Model\+Case.\+Model\+Case (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{enumutilitaires_1_1_case_type}{Case\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la class \mbox{\hyperlink{classmodel_1_1_model_case}{model.\+Model\+Case}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & \mbox{[}int\mbox{]} Position x de la case \\
+\hline
+{\em y} & \mbox{[}int\mbox{]} Position y de la case \\
+\hline
+{\em type} & \mbox{[}\mbox{\hyperlink{enumutilitaires_1_1_case_type}{utilitaires.\+Case\+Type}}\mbox{]} Type de la casse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On définit les valeurs des attributs x, y et type avec les trois paramètres
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Si le type de la case est n\textquotesingle{}est pas vide alors on regarde si son type correspond à une couleur, si oui on l\textquotesingle{}a bloque 
+\end{DoxyItemize}
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classmodel_1_1_model_case_aaa27443b220af9b25b7bc3015501868a}\label{classmodel_1_1_model_case_aaa27443b220af9b25b7bc3015501868a}} 
+\index{model.ModelCase@{model.ModelCase}!equals@{equals}}
+\index{equals@{equals}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily boolean model.\+Model\+Case.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o }\end{DoxyParamCaption})}
+
+
+
+Compare deux objets de type \mbox{\hyperlink{classmodel_1_1_model_case}{model.\+Model\+Case}}. 
+
+\begin{DoxyReturn}{Renvoie}
+x == model\+Case.\+x \&\& y == model\+Case.\+y \&\& type == model\+Case.\+type \mbox{[}boolean\mbox{]} Valeur booléenne de la différence avec un autre objet de la classe \mbox{\hyperlink{classmodel_1_1_model_case}{model.\+Model\+Case}} 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne vrai si l\textquotesingle{}adresse mémoire est la même pour les deux objets
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On retourne faux si l\textquotesingle{}objet n\textquotesingle{}est pas de la même classe
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item On retourne vrais si les attributs des deux objets correspondent \begin{DoxySeeAlso}{Voir également}
+\char`\"{}https\+://docs.\+oracle.\+com/javase/7/docs/api/java/lang/\+Object.\+html\char`\"{} 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_aa20ec17f39d60e29e49b829ef129bb3e}\label{classmodel_1_1_model_case_aa20ec17f39d60e29e49b829ef129bb3e}} 
+\index{model.ModelCase@{model.ModelCase}!getType@{getType}}
+\index{getType@{getType}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumutilitaires_1_1_case_type}{Case\+Type}} model.\+Model\+Case.\+get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut type. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+type\+: \mbox{[}\mbox{\hyperlink{enumutilitaires_1_1_case_type}{utilitaires.\+Case\+Type}}\mbox{]} Retourne le type de la case 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie le type de la case 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_a1d9d345355c1d1e04b1504653654bd55}\label{classmodel_1_1_model_case_a1d9d345355c1d1e04b1504653654bd55}} 
+\index{model.ModelCase@{model.ModelCase}!getX@{getX}}
+\index{getX@{getX}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int model.\+Model\+Case.\+getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut x. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+x\+: \mbox{[}int\mbox{]} Retourne la position x de la case 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie la position x de la case 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_a74cf270e8d3b1b5dc785861d87f3c780}\label{classmodel_1_1_model_case_a74cf270e8d3b1b5dc785861d87f3c780}} 
+\index{model.ModelCase@{model.ModelCase}!getY@{getY}}
+\index{getY@{getY}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int model.\+Model\+Case.\+getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut y. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+y\+: \mbox{[}int\mbox{]} Retourne la position y de la case 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie la position y de la case 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_a3b007d5c08b7b48c3b833f260356a2bd}\label{classmodel_1_1_model_case_a3b007d5c08b7b48c3b833f260356a2bd}} 
+\index{model.ModelCase@{model.ModelCase}!isLocked@{isLocked}}
+\index{isLocked@{isLocked}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{isLocked()}{isLocked()}}
+{\footnotesize\ttfamily boolean model.\+Model\+Case.\+is\+Locked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut locked. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+locked\+: \mbox{[}boolean\mbox{]} Retourne vrai si la case est bloqué, faux si non 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie la valeur de l\textquotesingle{}attribut locked 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_a152d1a919909d6e55708a1bec4090a30}\label{classmodel_1_1_model_case_a152d1a919909d6e55708a1bec4090a30}} 
+\index{model.ModelCase@{model.ModelCase}!isSameDirection@{isSameDirection}}
+\index{isSameDirection@{isSameDirection}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{isSameDirection()}{isSameDirection()}}
+{\footnotesize\ttfamily boolean model.\+Model\+Case.\+is\+Same\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumutilitaires_1_1_case_type}{Case\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le type en paramètre est dans la même direction que la case actuelle. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{[}boolean\mbox{]} Retourne vrai si le type en paramètre est dans la même direction que la case actuelle 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie vrai si le type de la case actuelle est une direction et que le type en paramètre est un croisement 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_a237042c9663f451a330902c9c59bb11f}\label{classmodel_1_1_model_case_a237042c9663f451a330902c9c59bb11f}} 
+\index{model.ModelCase@{model.ModelCase}!isTurn@{isTurn}}
+\index{isTurn@{isTurn}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{isTurn()}{isTurn()}}
+{\footnotesize\ttfamily boolean model.\+Model\+Case.\+is\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la case est un tournant. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{[}boolean\mbox{]} Retourne vrai si le type de la case est un tournant 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie vrai si le type de la case est un tournant 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_a4cf7c5e417093fb37c2ea6238489fb94}\label{classmodel_1_1_model_case_a4cf7c5e417093fb37c2ea6238489fb94}} 
+\index{model.ModelCase@{model.ModelCase}!isWay@{isWay}}
+\index{isWay@{isWay}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{isWay()}{isWay()}}
+{\footnotesize\ttfamily boolean model.\+Model\+Case.\+is\+Way (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la case est un chemin. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{[}boolean\mbox{]} Retourne vrai si le type de la case est un chemin 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie vrai si le type de la case est un chemin 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_a9e12554c2237eb261d64c989d6834734}\label{classmodel_1_1_model_case_a9e12554c2237eb261d64c989d6834734}} 
+\index{model.ModelCase@{model.ModelCase}!setNextNumber@{setNextNumber}}
+\index{setNextNumber@{setNextNumber}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{setNextNumber()}{setNextNumber()}}
+{\footnotesize\ttfamily void model.\+Model\+Case.\+set\+Next\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Change le type de la case lors de la création d\textquotesingle{}un niveau. 
+
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On vérifie le type de la case et on assigne à l\textquotesingle{}attribut type la prochaine valeur avec un switch case 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_aa8790318bf6e631842f8d360f4c83b1f}\label{classmodel_1_1_model_case_aa8790318bf6e631842f8d360f4c83b1f}} 
+\index{model.ModelCase@{model.ModelCase}!setType@{setType}}
+\index{setType@{setType}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void model.\+Model\+Case.\+set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumutilitaires_1_1_case_type}{Case\+Type}}}]{ct }\end{DoxyParamCaption})}
+
+
+
+Mutateur de l\textquotesingle{}attribut type. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ct} & \mbox{[}\mbox{\hyperlink{enumutilitaires_1_1_case_type}{utilitaires.\+Case\+Type}}\mbox{]} Type de la case à définir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On assigne à l\textquotesingle{}attribut type la valeur de la variable ct en paramètre 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_model_case_a0e38af16a31a450605bccf7c8044f693}\label{classmodel_1_1_model_case_a0e38af16a31a450605bccf7c8044f693}} 
+\index{model.ModelCase@{model.ModelCase}!toString@{toString}}
+\index{toString@{toString}!model.ModelCase@{model.ModelCase}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily String model.\+Model\+Case.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne en chaine de caractère la position de la case. 
+
+\begin{DoxyReturn}{Renvoie}
+\char`\"{}\+X\+: \char`\"{} + this.\+x + \char`\"{}, Y\+: \char`\"{} + this.\+y\+: \mbox{[}String\mbox{]} Chaine de caractère avec la position de la case 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne en chaine de caractère la position de la case en fonction de x et y 
+\end{DoxyItemize}
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Evan/\+Desktop/\+Flow\+Game/src/model/\mbox{\hyperlink{_model_case_8java}{Model\+Case.\+java}}\end{DoxyCompactItemize}

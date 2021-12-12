@@ -1,0 +1,164 @@
+\hypertarget{classmodel_1_1_user}{}\doxysection{Référence de la classe model.\+User}
+\label{classmodel_1_1_user}\index{model.User@{model.User}}
+Graphe d\textquotesingle{}héritage de model.\+User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmodel_1_1_user}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1_user_a42d22dfb9fdcf122afd73e6b620b5a55}{User}} (int id, String username, int points)
+\begin{DoxyCompactList}\small\item\em Constructeur de la class \mbox{\hyperlink{classmodel_1_1_user}{model.\+User}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_user_abd8def1ea4b880c26f0fa072105c790a}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut id. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classmodel_1_1_user_a964ba13bb99d3bd7ab7c342a9c03bc46}{get\+Username}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut username. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_user_af7aa49c6976e9f871959ab8cfd2adaf7}{add\+Points}} (int points)
+\begin{DoxyCompactList}\small\item\em Ajoute un certains nombres de points à l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_user_a4fcec99ba73b3f97b987a8806d05fc7b}{get\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_user_adb924c957d22eaf968ca84f62d852281}{compare\+To}} (\mbox{\hyperlink{classmodel_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Réécriture de la méthode compare\+To de l\textquotesingle{}interface Comparable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classmodel_1_1_user_a42d22dfb9fdcf122afd73e6b620b5a55}\label{classmodel_1_1_user_a42d22dfb9fdcf122afd73e6b620b5a55}} 
+\index{model.User@{model.User}!User@{User}}
+\index{User@{User}!model.User@{model.User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily model.\+User.\+User (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{String}]{username,  }\item[{int}]{points }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la class \mbox{\hyperlink{classmodel_1_1_user}{model.\+User}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & \mbox{[}int\mbox{]} Identifiant de l\textquotesingle{}utilisateur \\
+\hline
+{\em username} & \mbox{[}String\mbox{]} Nom de l\textquotesingle{}utilisateur \\
+\hline
+{\em points} & \mbox{[}int\mbox{]} Points de l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On définit les valeurs des trois paramètres aux trois attributs 
+\end{DoxyItemize}
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classmodel_1_1_user_af7aa49c6976e9f871959ab8cfd2adaf7}\label{classmodel_1_1_user_af7aa49c6976e9f871959ab8cfd2adaf7}} 
+\index{model.User@{model.User}!addPoints@{addPoints}}
+\index{addPoints@{addPoints}!model.User@{model.User}}
+\doxysubsubsection{\texorpdfstring{addPoints()}{addPoints()}}
+{\footnotesize\ttfamily void model.\+User.\+add\+Points (\begin{DoxyParamCaption}\item[{int}]{points }\end{DoxyParamCaption})}
+
+
+
+Ajoute un certains nombres de points à l\textquotesingle{}utilisateur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em points} & \mbox{[}int\mbox{]} Nombre de points à ajouter à l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On définit la valeur des points de l\textquotesingle{}utilisateur par son nombre de points actuel + le nombre de points en paramètre 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_user_adb924c957d22eaf968ca84f62d852281}\label{classmodel_1_1_user_adb924c957d22eaf968ca84f62d852281}} 
+\index{model.User@{model.User}!compareTo@{compareTo}}
+\index{compareTo@{compareTo}!model.User@{model.User}}
+\doxysubsubsection{\texorpdfstring{compareTo()}{compareTo()}}
+{\footnotesize\ttfamily int model.\+User.\+compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Réécriture de la méthode compare\+To de l\textquotesingle{}interface Comparable. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \mbox{[}\mbox{\hyperlink{classmodel_1_1_user}{model.\+User}}\mbox{]} Utilisateur à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+(this.\+points -\/ user.\+points) \mbox{[}int\mbox{]} Difference de points de l\textquotesingle{}utilisateur actuel et celui passé en paramètre 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On retourne la difference de points de l\textquotesingle{}utilisateur actuel et celui passé en paramètre \begin{DoxySeeAlso}{Voir également}
+\char`\"{}https\+://docs.\+oracle.\+com/javase/7/docs/api/java/lang/\+Comparable.\+html\char`\"{} 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_user_abd8def1ea4b880c26f0fa072105c790a}\label{classmodel_1_1_user_abd8def1ea4b880c26f0fa072105c790a}} 
+\index{model.User@{model.User}!getId@{getId}}
+\index{getId@{getId}!model.User@{model.User}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int model.\+User.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut id. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+id\+: \mbox{[}int\mbox{]} Identifiant de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie l\textquotesingle{}attribut id 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_user_a4fcec99ba73b3f97b987a8806d05fc7b}\label{classmodel_1_1_user_a4fcec99ba73b3f97b987a8806d05fc7b}} 
+\index{model.User@{model.User}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!model.User@{model.User}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily int model.\+User.\+get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut points. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+points\+: \mbox{[}int\mbox{]} Points de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie l\textquotesingle{}attribut points 
+\end{DoxyItemize}\mbox{\Hypertarget{classmodel_1_1_user_a964ba13bb99d3bd7ab7c342a9c03bc46}\label{classmodel_1_1_user_a964ba13bb99d3bd7ab7c342a9c03bc46}} 
+\index{model.User@{model.User}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!model.User@{model.User}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily String model.\+User.\+get\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut username. 
+
+\begin{DoxyReturn}{Renvoie}
+this.\+username\+: \mbox{[}String\mbox{]} Nom de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Evan SEDENO
+\end{DoxyAuthor}
+
+\begin{DoxyItemize}
+\item On renvoie l\textquotesingle{}attribut username 
+\end{DoxyItemize}
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Evan/\+Desktop/\+Flow\+Game/src/model/\mbox{\hyperlink{_user_8java}{User.\+java}}\end{DoxyCompactItemize}

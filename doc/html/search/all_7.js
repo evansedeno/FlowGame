@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['h0h1_0',['h0h1',['../enum_case_type.html#a1a7c2360e78abe8ebcb2f70913ad30de',1,'CaseType']]],
-  ['h0v0_1',['h0v0',['../enum_case_type.html#a0c07e9c1f85924be898bd230423cc457',1,'CaseType']]],
-  ['h0v1_2',['h0v1',['../enum_case_type.html#a44b7f46602c1b8ce3db6d9085a6e4ca3',1,'CaseType']]],
-  ['h1v0_3',['h1v0',['../enum_case_type.html#a99194f293b6d8242a8ee5c6a611904af',1,'CaseType']]],
-  ['h1v1_4',['h1v1',['../enum_case_type.html#a3e8b8cf5d41e386ed886f93966bc795c',1,'CaseType']]]
+  ['iscreation_0',['isCreation',['../classmodel_1_1_model_grille.html#a723dde84739e7853e66a5d784b582d74',1,'model::ModelGrille']]],
+  ['isfinished_1',['isFinished',['../classmodel_1_1_model_grille.html#a6b7f4de71f812c20a11b465470e7c828',1,'model::ModelGrille']]],
+  ['islocked_2',['isLocked',['../classmodel_1_1_model_case.html#a3b007d5c08b7b48c3b833f260356a2bd',1,'model::ModelCase']]],
+  ['issamedirection_3',['isSameDirection',['../classmodel_1_1_model_case.html#a152d1a919909d6e55708a1bec4090a30',1,'model::ModelCase']]],
+  ['isturn_4',['isTurn',['../classmodel_1_1_model_case.html#a237042c9663f451a330902c9c59bb11f',1,'model::ModelCase']]],
+  ['isway_5',['isWay',['../classmodel_1_1_model_case.html#a4cf7c5e417093fb37c2ea6238489fb94',1,'model::ModelCase']]]
 ];

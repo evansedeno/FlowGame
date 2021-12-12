@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jeu_0',['Jeu',['../class_jeu.html#a25d1f0eecc2af0c38dfa7d4e4da52aee',1,'Jeu']]]
+  ['jeu_0',['Jeu',['../classmodel_1_1_jeu.html#a6f3a2d56e23acc2b86dd626a9c6deaf2',1,'model::Jeu']]]
 ];

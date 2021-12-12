@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['firsttype_0',['firsttype',['../class_vue_case.html#ac28d099481e29acee13b95da9b1ccf43',1,'VueCase']]]
+  ['v0v1_0',['v0v1',['../enumutilitaires_1_1_case_type.html#a5069ca0728b3f6313a0513312438d574',1,'utilitaires::CaseType']]]
 ];

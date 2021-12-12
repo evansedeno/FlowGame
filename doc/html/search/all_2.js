@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['c_0',['c',['../class_vue_case.html#aef67717f1e26d4187c4264351fe85a40',1,'VueCase']]],
-  ['casetype_1',['CaseType',['../enum_case_type.html',1,'']]],
-  ['casetype_2ejava_2',['CaseType.java',['../_case_type_8java.html',1,'']]],
-  ['checkgoodchemin_3',['checkGoodChemin',['../class_chemin.html#a72579f26b47ff4bd7a67d6cbecb2b47a',1,'Chemin']]],
-  ['chemin_4',['Chemin',['../class_chemin.html',1,'Chemin'],['../class_chemin.html#a0ab80a3724106d5f88a467e942bcc570',1,'Chemin.Chemin()']]],
-  ['chemin_2ejava_5',['Chemin.java',['../_chemin_8java.html',1,'']]],
-  ['clicked_6',['clicked',['../class_vue_controleur_grille.html#a51fa7289a5af6207d8add80f97df5a4f',1,'VueControleurGrille']]],
-  ['compareto_7',['compareTo',['../class_user.html#a12d5391936f20477f19a8764fc78334e',1,'User']]],
-  ['contentpane_8',['contentPane',['../class_vue_controleur_grille.html#a0f0d8c17082005c9b8a20b565e84e3fe',1,'VueControleurGrille']]],
-  ['creategame_9',['createGame',['../class_jeu.html#aab0adad71d57fe39db197fac304ea059',1,'Jeu']]],
-  ['cross_10',['cross',['../enum_case_type.html#ac88db0307281bbab32643bed361602b6',1,'CaseType']]],
-  ['currentcomponent_11',['currentComponent',['../class_vue_controleur_grille.html#a270d59ec4125430ce6f11aed55772155',1,'VueControleurGrille']]]
+  ['deletechemin_0',['deleteChemin',['../classmodel_1_1_chemin.html#a829782187018cbc8e22f5fb7afa656a1',1,'model::Chemin']]],
+  ['displaycreationfinished_1',['displayCreationFinished',['../classvuecontroleur_1_1_vue_controleur_grille.html#a17ca69244fbd8cce54c60b7705451ff6',1,'vuecontroleur::VueControleurGrille']]],
+  ['displayvalidatebutton_2',['displayValidateButton',['../classvuecontroleur_1_1_vue_controleur_grille.html#a52ff890020781846108456b860eb9db4',1,'vuecontroleur::VueControleurGrille']]],
+  ['drawlevelsmenu_3',['drawLevelsMenu',['../classvuecontroleur_1_1_vue_controleur_menu.html#a121d2506853a6041dc21beaec6a7a84e',1,'vuecontroleur::VueControleurMenu']]],
+  ['drawmainmenu_4',['drawMainMenu',['../classvuecontroleur_1_1_vue_controleur_menu.html#ac100a45d28ecf6a91753cb1ea0905b89',1,'vuecontroleur::VueControleurMenu']]],
+  ['drawpointsmenu_5',['drawPointsMenu',['../classvuecontroleur_1_1_vue_controleur_menu.html#ad570238b2984c6876b5dc9b8880582d9',1,'vuecontroleur::VueControleurMenu']]],
+  ['drawreturnbutton_6',['drawReturnButton',['../classvuecontroleur_1_1_vue_controleur_menu.html#a04b7c2814f2f526b53ba73e0003c3629',1,'vuecontroleur::VueControleurMenu']]],
+  ['drawsizesmenu_7',['drawSizesMenu',['../classvuecontroleur_1_1_vue_controleur_menu.html#a8e5d44966ac250966ba6c5b0eb39b4f5',1,'vuecontroleur::VueControleurMenu']]],
+  ['drawtext_8',['drawText',['../classvuecontroleur_1_1_vue_controleur_menu.html#a9c0df9206941d3de6887d1f8a0fbdb85',1,'vuecontroleur::VueControleurMenu']]],
+  ['drawtitle_9',['drawTitle',['../classvuecontroleur_1_1_vue_controleur_menu.html#a360bf088ad92fa33a3a64123d05d2314',1,'vuecontroleur::VueControleurMenu']]],
+  ['drawusernamemenu_10',['drawUsernameMenu',['../classvuecontroleur_1_1_vue_controleur_menu.html#a38bc611b03dda7fb24662a9003c57c93',1,'vuecontroleur::VueControleurMenu']]]
 ];

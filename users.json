@@ -1,17 +1,17 @@
 [
   {
     "id": 2,
-    "username": "Jean",
-    "points": 32
+    "username": "Frederic",
+    "points": 20
   },
   {
     "id": 0,
-    "username": "Leiven",
-    "points": 3
+    "username": "Evan",
+    "points": 18
   },
   {
     "id": 1,
-    "username": "Slahino",
-    "points": 6
+    "username": "Yassine",
+    "points": 8
   }
 ]
